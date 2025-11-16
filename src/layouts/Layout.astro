@@ -12,6 +12,7 @@ import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
+import SecurityHeaders from '~/components/common/SecurityHeaders.astro';
 
 // Comment the line below to disable View Transitions
 import { ClientRouter } from 'astro:transitions';
@@ -39,6 +40,7 @@ const { language, textDirection } = I18N;
     <Favicons />
     <CustomStyles />
     <ApplyColorMode />
+    <SecurityHeaders />
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
