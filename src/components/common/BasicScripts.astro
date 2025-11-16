@@ -44,7 +44,12 @@ import { UI } from 'astrowind:config';
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
-    attachEvent('#header nav', 'click', function () {
+    attachEvent('#header nav a[href]', 'click', function (e) {
+      // Don't close menu if clicking on a submenu toggle button
+      if (e.target.closest('[data-aw-toggle-submenu]')) {
+        return;
+      }
+      // Close menu when clicking on a regular link
       document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
       document.body.classList.remove('overflow-hidden');
       document.getElementById('header')?.classList.remove('h-screen');
@@ -62,6 +67,55 @@ import { UI } from 'astrowind:config';
       document.getElementById('header')?.classList.toggle('bg-page');
       document.querySelector('#header nav')?.classList.toggle('hidden');
       document.querySelector('#header > div > div:last-child')?.classList.toggle('hidden');
+    });
+
+    // Toggle submenus on mobile
+    attachEvent('[data-aw-toggle-submenu]', 'click', function (e, elem) {
+      // Only handle on mobile (screen width < 768px)
+      if (window.innerWidth >= 768) {
+        return;
+      }
+      
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const dropdown = elem.closest('.dropdown');
+      const submenu = dropdown?.querySelector('.dropdown-menu');
+      const chevron = elem.querySelector('svg');
+      
+      if (!submenu) return;
+      
+      // Close other open submenus
+      document.querySelectorAll('.dropdown').forEach((item) => {
+        if (item !== dropdown) {
+          const otherSubmenu = item.querySelector('.dropdown-menu');
+          const otherChevron = item.querySelector('[data-aw-toggle-submenu] svg');
+          if (otherSubmenu) {
+            otherSubmenu.classList.remove('max-h-[1000px]');
+            otherSubmenu.classList.add('max-h-0');
+          }
+          if (otherChevron) {
+            otherChevron.classList.remove('rotate-180');
+          }
+        }
+      });
+      
+      // Toggle current submenu
+      const isOpen = submenu.classList.contains('max-h-[1000px]');
+      
+      if (isOpen) {
+        submenu.classList.remove('max-h-[1000px]');
+        submenu.classList.add('max-h-0');
+        if (chevron) {
+          chevron.classList.remove('rotate-180');
+        }
+      } else {
+        submenu.classList.remove('max-h-0');
+        submenu.classList.add('max-h-[1000px]');
+        if (chevron) {
+          chevron.classList.add('rotate-180');
+        }
+      }
     });
 
     attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {

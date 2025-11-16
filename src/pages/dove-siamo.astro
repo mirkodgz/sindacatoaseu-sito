@@ -1,0 +1,130 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Dove siamo — SINDACATO A.S.E.U.',
+  description: 'La sede principale del sindacato si trova a Milano in Via Mario Pieri n.2 – 20127',
+};
+
+const sedeNazionale = {
+  id: 'modal-sede-nazionale-dove-siamo',
+  title: 'Sede Nazionale',
+  zone: 'Sede Nazionale',
+  ref: 'Bruno Romeo',
+  phoneDisplay: '02.2592773',
+  phoneLink: '022592773',
+  cellDisplay: '349.6250509',
+  cellLink: '3496250509',
+  email: 'info@sindacatoaseu.it',
+  address: 'Via Mario Pieri, 2, 20127 Milano (MI) - Italia',
+  summary: 'Via Mario Pieri, 2 — Milano (MI)',
+  mapsUrl: 'https://maps.app.goo.gl/YaBgihcohPUFvqLH6',
+  icon: '📍',
+  info: 'La sede si trova a 200 metri dalle fermata M2 di Crescenzago direzione Cologno Nord.',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="relative w-full h-[50vh] md:h-[60vh] -mt-[76px] not-prose">
+    <div class="absolute inset-0">
+      <img
+        src="/sedi-page-hero.jpg"
+        alt="Dove siamo SINDACATO A.S.E.U."
+        class="w-full h-full object-cover object-left md:object-center"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <section class="bg-[#fbfbfb] py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-4">Dove siamo</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sede Principale SINDACATO A.S.E.U.</h1>
+        <p class="text-base text-gray-700 max-w-3xl mx-auto mb-4">
+          La sede del sindacato si trova a Milano in Via Mario Pieri n.2 – 20127.
+        </p>
+        <p class="text-base text-gray-600 max-w-3xl mx-auto">
+          {sedeNazionale.info}
+        </p>
+      </div>
+
+      <!-- Informazioni Sede Principale -->
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Card con informazioni -->
+          <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
+            <div class="text-4xl mb-6">{sedeNazionale.icon}</div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">{sedeNazionale.title}</h2>
+            
+            <div class="space-y-4 text-gray-700 text-base">
+              <p>
+                <span class="font-semibold text-gray-900">Associazione:</span> Associazione Sindacale Europea Universale
+              </p>
+              {sedeNazionale.ref && (
+                <p>
+                  <span class="font-semibold text-gray-900">Referente:</span> {sedeNazionale.ref}
+                </p>
+              )}
+              <p>
+                <span class="font-semibold text-gray-900">Indirizzo:</span> {sedeNazionale.address}
+              </p>
+              {sedeNazionale.phoneDisplay && (
+                <p>
+                  <span class="font-semibold text-gray-900">Telefono:</span>{' '}
+                  <a href={`tel:${sedeNazionale.phoneLink}`} class="text-[#0fbe7c] hover:underline">
+                    {sedeNazionale.phoneDisplay}
+                  </a>
+                </p>
+              )}
+              {sedeNazionale.cellDisplay && (
+                <p>
+                  <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
+                  <a href={`tel:${sedeNazionale.cellLink}`} class="text-[#0fbe7c] hover:underline">
+                    {sedeNazionale.cellDisplay}
+                  </a>
+                </p>
+              )}
+              {sedeNazionale.email && (
+                <p>
+                  <span class="font-semibold text-gray-900">Email:</span>{' '}
+                  <a href={`mailto:${sedeNazionale.email}`} class="text-[#0fbe7c] hover:underline">
+                    {sedeNazionale.email}
+                  </a>
+                </p>
+              )}
+            </div>
+
+            <div class="mt-8">
+              <a
+                href={sedeNazionale.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#0fbe7c] text-white font-semibold rounded-full hover:bg-[#0ca868] transition"
+              >
+                Apri in Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Mappa Google Maps -->
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <div class="h-full min-h-[400px]">
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent(sedeNazionale.address)}&output=embed`}
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full min-h-[400px]"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+

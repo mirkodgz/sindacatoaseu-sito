@@ -1,0 +1,55 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import { getHomePermalink, getPermalink } from '~/utils/permalinks';
+
+export async function getStaticPaths() {
+  const cafServices = await getCollection('caf');
+  return cafServices.map((service) => ({
+    params: { slug: service.slug ?? service.data.slug },
+    props: { service },
+  }));
+}
+
+const { service: cafService } = Astro.props;
+
+if (!cafService) {
+  throw new Error('CAF / Patronato non trovato');
+}
+
+const { Content } = await cafService.render();
+const metadata = {
+  title: `${cafService.data.title} — CAF e Patronato | SINDACATO A.S.E.U.`,
+  description: 'TODO: testo da inserire',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <nav class="text-sm text-gray-500">
+      <a class="hover:text-[#0fbe7c]" href={getHomePermalink()}>Home</a>
+      <span class="mx-2">›</span>
+      <a class="hover:text-[#0fbe7c]" href={getPermalink('/caf-patronato')}>CAF e Patronato</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-900">{cafService.data.title}</span>
+    </nav>
+
+    <h1 class="mt-6 text-3xl font-bold uppercase text-gray-900">{cafService.data.title}</h1>
+
+    {cafService.data.image && (
+      <div class="mt-8">
+        <img
+          src={cafService.data.image}
+          alt={cafService.data.title}
+          class="w-full rounded-xl border border-gray-200 object-cover"
+          loading="lazy"
+        />
+      </div>
+    )}
+
+    <article class="prose max-w-none mt-10">
+      <Content />
+    </article>
+  </section>
+</PageLayout>
+

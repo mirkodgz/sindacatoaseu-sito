@@ -1,182 +1,111 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'HOME',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'SEDI',
+      href: getPermalink('/sedi'),
+    },
+    {
+      text: 'CHI SIAMO',
+      href: getPermalink('/chi-siamo'),
+    },
+    {
+      text: 'SERVIZI',
+      href: getPermalink('/servizi'),
+      links: [
+        { text: 'CONSULENZA LEGALE', href: getPermalink('/servizi/consulenza-legale') },
+        {
+          text: 'CONTEGGI SPETTANZE DI FINE RAPPORTO E TFR',
+          href: getPermalink('/servizi/conteggi-spettanze-di-fine-rapporto-e-tfr'),
+        },
+        { text: 'CONTROLLO BUSTE PAGA', href: getPermalink('/servizi/controllo-buste-paga') },
+        { text: 'CONTROVERSIE DI LAVORO', href: getPermalink('/servizi/controversie-di-lavoro') },
+        { text: 'GESTIONI COLF E BADANTI', href: getPermalink('/servizi/gestioni-colf-e-badanti') },
+        { text: 'PRATICHE DISCIPLINARI', href: getPermalink('/servizi/pratiche-disciplinari') },
+        { text: 'RECUPERI CREDITI DI LAVORO', href: getPermalink('/servizi/recuperi-crediti-di-lavoro') },
+        { text: 'REDAZIONI DI VERBALI DI CONCILIAZIONE', href: getPermalink('/servizi/redazioni-di-verbali-di-conciliazione') },
+        { text: 'RICOSTRUZIONE CREDITI DI LAVORO A NERO', href: getPermalink('/servizi/ricostruzione-crediti-di-lavoro-a-nero') },
+        { text: 'UFFICIO VERTENZE', href: getPermalink('/servizi/ufficio-vertenze') },
+      ],
+    },
+    {
+      text: 'CENTRO SERVIZI CSU',
+      href: getPermalink('/centro-servizi-csu'),
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'RICORSI CONTRO AGENZIA ENTRATE RISCONSIONE',
+          href: getPermalink('/centro-servizi-csu/ricorsi-agenzia-entrate-riscossione'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'INFORTUNISTICA, MALASANITÀ E INCIDENTI STRADALI',
+          href: getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'APERTURA PARTITE IVA',
+          href: getPermalink('/centro-servizi-csu/apertura-partite-iva'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'CAF E PATRONATO',
+      href: getPermalink('/caf-patronato'),
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'MODELLO 730 – UNICO – IMU – SUCCESSIONI',
+          href: getPermalink('/caf-patronato/modello-730-unico-imu-successioni'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'INDENNITÀ DI DISOCCUPAZIONE',
+          href: getPermalink('/caf-patronato/indennita-di-disoccupazione'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'DOMANDE DI PENSIONE',
+          href: getPermalink('/caf-patronato/domande-di-pensione'),
         },
         {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'ASSISTENZA IMMIGRAZIONE',
+          href: getPermalink('/caf-patronato/assistenza-immigrazione'),
         },
       ],
     },
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
+      text: 'DOVE SIAMO',
+      href: getPermalink('/dove-siamo'),
     },
     {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
+      text: 'CONTATTI',
+      href: getPermalink('/contatti'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'SINDACATO A.S.E.U.',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
-    },
-    {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Home', href: getPermalink('/') },
+        { text: 'Chi siamo', href: getPermalink('/chi-siamo') },
+        { text: 'Servizi', href: getPermalink('/servizi') },
+        { text: 'Centro Servizi CSU', href: getPermalink('/centro-servizi-csu') },
+        { text: 'CAF e Patronato', href: getPermalink('/caf-patronato') },
+        { text: 'Sedi', href: getPermalink('/sedi') },
+        { text: 'Contatti', href: getPermalink('/contatti') },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Cookie Policy', href: getPermalink('/cookie') },
   ],
-  socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
-  ],
+  socialLinks: [],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    Associazione Sindacale Europea Universale Via Mario Pieri,2 Milano (MI) 20127 – Tel. 02.2592773 – cell.: 349.6250509 – e-mail: info@sindacatoaseu.it
   `,
 };

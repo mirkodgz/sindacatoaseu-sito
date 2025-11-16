@@ -1,0 +1,39 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+
+const cafServices = await getCollection('caf');
+const metadata = {
+  title: 'CAF e Patronato — SINDACATO A.S.E.U.',
+  description: 'CAF e Patronato a Milano. Modello 730, Unico, IMU, domande pensione, indennità disoccupazione, assistenza immigrazione. Servizi fiscali e previdenziali professionali.',
+  keywords: 'CAF milano, patronato milano, modello 730 milano, modello unico milano, IMU milano, successioni milano, domande pensione milano, indennità disoccupazione milano, assistenza immigrazione milano',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <h1 class="text-3xl font-semibold text-gray-900">CAF e Patronato</h1>
+    <p class="mt-4 text-base text-gray-600">
+      Inoltre, offre i seguenti servizi di CAF e Patronato: Modello 730, Unico, Imu, Successioni, domande di pensione: vecchiaia, reversibilità, anzianità, invalidità civile, accompagnamento, indennità di disoccupazione e assistenza immigrazione.
+    </p>
+
+    <ul class="mt-10 space-y-3">
+      {
+        cafServices.map((service) => (
+          <li>
+            <a
+              href={`/caf-patronato/${service.slug}`}
+              class="flex items-center gap-3 text-base text-gray-900 hover:text-[#0fbe7c] transition group"
+            >
+              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-[#0fbe7c] group-hover:bg-[#0ca868] transition"></span>
+              <Icon name="tabler:chevron-right" class="w-4 h-4 text-[#0fbe7c] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span class="flex-grow">{service.data.title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>
+

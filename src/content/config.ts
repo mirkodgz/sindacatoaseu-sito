@@ -65,6 +65,31 @@ const postCollection = defineCollection({
   }),
 });
 
+const serviceSchema = z.object({
+  title: z.string(),
+  slug: z.string().optional(),
+  category: z.enum(['servizi', 'csu', 'caf']).optional(),
+  image: z.string().optional(),
+});
+
+const serviziCollection = defineCollection({
+  type: 'content',
+  schema: serviceSchema,
+});
+
+const csuCollection = defineCollection({
+  type: 'content',
+  schema: serviceSchema,
+});
+
+const cafCollection = defineCollection({
+  type: 'content',
+  schema: serviceSchema,
+});
+
 export const collections = {
   post: postCollection,
+  servizi: serviziCollection,
+  csu: csuCollection,
+  caf: cafCollection,
 };

@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: SINDACATO A.S.E.U.
+  site: 'https://www.sindacatoaseu.it'
   base: '/'
   trailingSlash: false
 
@@ -9,26 +9,26 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: SINDACATO A.S.E.U. – Associazione Sindacale Europea Universale
+    template: '%s — SINDACATO A.S.E.U.'
+  description: 'Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione. Tutela lavoratori, pensioni, ricorsi e servizi CSU.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: SINDACATO A.S.E.U.
     images:
-      - url: '~/assets/images/default.png'
+      - url: '/og-image.jpg'
         width: 1200
-        height: 628
+        height: 630
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: it
   textDirection: ltr
 
 apps:

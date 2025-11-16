@@ -21,34 +21,77 @@ import '@fontsource-variable/inter';
 
 <style is:inline>
   :root {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-sans: 'Titillium Web', sans-serif;
+    --aw-font-serif: 'Titillium Web', sans-serif;
+    --aw-font-heading: 'Titillium Web', sans-serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(15 190 124);
+    --aw-color-secondary: rgb(12 152 100);
+    --aw-color-accent: rgb(15 190 124);
 
     --aw-color-text-heading: rgb(0 0 0);
     --aw-color-text-default: rgb(16 16 16);
     --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-bg-page: rgb(251 251 251);
 
     --aw-color-bg-page-dark: rgb(3 6 32);
 
     ::selection {
-      background-color: lavender;
+      background-color: rgba(15, 190, 124, 0.2);
     }
   }
 
-  .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+  /* Animaciones sutiles para mejorar UX */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Animación para elementos que aparecen al hacer scroll */
+  .animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Transiciones suaves para View Transitions */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.3s;
+  }
+
+  /* Hover effects mejorados */
+  a, button {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .dark {
+    --aw-font-sans: 'Titillium Web', sans-serif;
+    --aw-font-serif: 'Titillium Web', sans-serif;
+    --aw-font-heading: 'Titillium Web', sans-serif;
+
+    --aw-color-primary: rgb(15 190 124);
+    --aw-color-secondary: rgb(12 152 100);
+    --aw-color-accent: rgb(15 190 124);
 
     --aw-color-text-heading: rgb(247, 248, 248);
     --aw-color-text-default: rgb(229 236 246);

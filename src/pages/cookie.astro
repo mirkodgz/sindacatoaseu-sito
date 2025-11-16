@@ -1,0 +1,93 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Cookie Policy — SINDACATO A.S.E.U.',
+  description: 'Informativa sui cookie utilizzati dal sito web SINDACATO A.S.E.U. ai sensi del GDPR e della normativa italiana',
+};
+
+const lastUpdate = new Date().toLocaleDateString('it-IT', { 
+  year: 'numeric', 
+  month: 'long', 
+  day: 'numeric' 
+});
+---
+
+<PageLayout metadata={metadata}>
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
+    
+    <div class="prose max-w-none text-base text-gray-700">
+      <p class="text-base text-gray-700 mb-6">
+        La presente informativa sui cookie è resa ai sensi dell'art. 13 del Regolamento (UE) n. 2016/679 ("GDPR") e del D.Lgs. 30 giugno 2003 n. 196 (Testo unico Privacy), così come modificato dal D.Lgs. n. 181/2018, a coloro che si collegano al sito web del <strong>SINDACATO A.S.E.U.</strong> (di seguito, il "Sito").
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cosa sono i cookie</h2>
+      <p class="text-base text-gray-700 mb-6">
+        I cookie sono piccoli file di testo che vengono memorizzati sul dispositivo dell'utente (computer, tablet, smartphone) quando si visita un sito web. I cookie permettono al sito di riconoscere il dispositivo dell'utente e memorizzare alcune informazioni sulle sue preferenze o azioni passate.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Tipologie di cookie utilizzati</h2>
+      
+      <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Cookie tecnici</h3>
+      <p class="text-base text-gray-700 mb-4">
+        Il Sito utilizza cookie tecnici necessari per il corretto funzionamento del sito stesso. Questi cookie sono essenziali per la navigazione e non possono essere disabilitati. Non vengono utilizzati per finalità ulteriori e sono normalmente installati direttamente dal titolare del sito.
+      </p>
+
+      <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Cookie di sessione</h3>
+      <p class="text-base text-gray-700 mb-4">
+        Il Sito utilizza cookie di sessione che vengono eliminati automaticamente alla chiusura del browser. Questi cookie sono necessari per garantire il corretto funzionamento del sito durante la navigazione.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Gestione dei cookie</h2>
+      <p class="text-base text-gray-700 mb-6">
+        L'utente può gestire le preferenze relative ai cookie attraverso le impostazioni del proprio browser. È possibile impostare il browser per rifiutare i cookie o per avvisare quando un cookie viene inviato. Tuttavia, la disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookie di terze parti</h2>
+      <p class="text-base text-gray-700 mb-6">
+        Il Sito potrebbe contenere link o incorporare contenuti di terze parti (ad esempio, mappe di Google Maps). Questi servizi potrebbero installare cookie propri sul dispositivo dell'utente. Il SINDACATO A.S.E.U. non ha accesso né controlla questi cookie. Per maggiori informazioni, si consiglia di consultare le informative sulla privacy e sui cookie dei rispettivi servizi di terze parti.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Durata dei cookie</h2>
+      <p class="text-base text-gray-700 mb-6">
+        I cookie utilizzati dal Sito hanno una durata limitata. I cookie di sessione vengono eliminati automaticamente alla chiusura del browser, mentre altri cookie tecnici possono avere una durata più lunga, comunque non superiore a quanto necessario per le finalità per cui sono stati installati.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Titolare del trattamento</h2>
+      <p class="text-base text-gray-700 mb-6">
+        Il titolare del trattamento dei dati è:
+      </p>
+      <p class="text-base text-gray-700 mb-6">
+        <strong>Associazione Sindacale Europea Universale – ASEU</strong><br />
+        Via Mario Pieri, n. 2, 20127 – Milano (MI) – Italia<br />
+        Codice fiscale: <strong>97756430159</strong><br />
+        Email: <a href="mailto:info@sindacatoaseu.it" class="text-[#0fbe7c] hover:underline">info@sindacatoaseu.it</a>
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Diritti dell'utente</h2>
+      <p class="text-base text-gray-700 mb-6">
+        Ai sensi del GDPR, l'utente ha il diritto di:
+      </p>
+      <ul class="list-disc pl-6 mb-6 text-base text-gray-700 space-y-2">
+        <li>Ottenere conferma dell'esistenza di dati personali che lo riguardano</li>
+        <li>Conoscere l'origine dei dati, le finalità e le modalità del trattamento</li>
+        <li>Ottenere la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge</li>
+        <li>Opporsi, per motivi legittimi, al trattamento dei dati personali</li>
+      </ul>
+      <p class="text-base text-gray-700 mb-6">
+        Per esercitare tali diritti, l'utente può rivolgersi al titolare del trattamento ai contatti indicati sopra.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Modifiche alla presente informativa</h2>
+      <p class="text-base text-gray-700 mb-6">
+        Il SINDACATO A.S.E.U. si riserva il diritto di modificare la presente informativa sui cookie in qualsiasi momento. Le modifiche entreranno in vigore dalla data di pubblicazione sul Sito. Si invita pertanto l'utente a consultare periodicamente la presente pagina per essere sempre aggiornato sulle ultime novità.
+      </p>
+
+      <p class="text-base text-gray-700 mt-8 mb-4">
+        <strong>Ultimo aggiornamento:</strong> {lastUpdate}
+      </p>
+    </div>
+  </section>
+</PageLayout>
+

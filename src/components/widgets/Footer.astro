@@ -1,7 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import { getHomePermalink } from '~/utils/permalinks';
+import { getPermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -26,23 +25,198 @@ export interface Props {
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
-  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div
-    class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-  >
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-      <div class="col-span-12 lg:col-span-4">
-        <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+<footer class="bg-[#2a2a2a] text-gray-300 not-prose">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8 mb-8">
+      <!-- Colonna 1: MAPPA DEL SITO -->
+      <div>
+        <h3 class="font-bold text-[#0fbe7c] text-lg mb-4 uppercase">MAPPA DEL SITO</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={getPermalink('/')} class="hover:text-[#0fbe7c] transition">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/sedi')} class="hover:text-[#0fbe7c] transition">
+              Sedi
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/chi-siamo')} class="hover:text-[#0fbe7c] transition">
+              Chi siamo
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi')} class="hover:text-[#0fbe7c] transition">
+              Servizi
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/caf-patronato')} class="hover:text-[#0fbe7c] transition">
+              CAF e Patronato
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/centro-servizi-csu')} class="hover:text-[#0fbe7c] transition">
+              Centro Servizi CSU
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/contatti')} class="hover:text-[#0fbe7c] transition">
+              Contatti
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/sedi')} class="hover:text-[#0fbe7c] transition">
+              Dove siamo
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/privacy')} class="hover:text-[#0fbe7c] transition">
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonna 2: SERVIZI SINDACATO -->
+      <div>
+        <h3 class="font-bold text-[#0fbe7c] text-lg mb-4 uppercase">
+          <a href={getPermalink('/servizi')} class="text-[#0fbe7c] hover:text-[#0ca868] transition">
+            SERVIZI SINDACATO
+          </a>
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={getPermalink('/servizi/ufficio-vertenze')} class="hover:text-[#0fbe7c] transition">
+              Ufficio vertenze
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/controversie-di-lavoro')} class="hover:text-[#0fbe7c] transition">
+              Controversie di lavoro
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/pratiche-disciplinari')} class="hover:text-[#0fbe7c] transition">
+              Pratiche disciplinari
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/recuperi-crediti-di-lavoro')} class="hover:text-[#0fbe7c] transition">
+              Recuperi crediti di lavoro
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/controllo-buste-paga')} class="hover:text-[#0fbe7c] transition">
+              Controllo buste paga
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/ricostruzione-crediti-di-lavoro-a-nero')} class="hover:text-[#0fbe7c] transition">
+              Ricostruzione crediti di lavoro a nero
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/redazioni-di-verbali-di-conciliazione')} class="hover:text-[#0fbe7c] transition">
+              Redazioni e sottoscrizioni di verbali di conciliazione ex Art.411 c.p.c. con deposito presso l'Ispettorato Territoriale del Lavoro
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/conteggi-spettanze-di-fine-rapporto-e-tfr')} class="hover:text-[#0fbe7c] transition">
+              Conteggi spettanze di fine rapporto e TFR
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/consulenza-legale')} class="hover:text-[#0fbe7c] transition">
+              Consulenza Legale
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/servizi/gestioni-colf-e-badanti')} class="hover:text-[#0fbe7c] transition">
+              Gestioni colf e badanti
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonna 3: CENTRO SERVIZI CSU -->
+      <div>
+        <h3 class="font-bold text-[#0fbe7c] text-lg mb-4 uppercase">
+          <a href={getPermalink('/centro-servizi-csu')} class="text-[#0fbe7c] hover:text-[#0ca868] transition">
+            CENTRO SERVIZI CSU
+          </a>
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={getPermalink('/centro-servizi-csu/apertura-partite-iva')} class="hover:text-[#0fbe7c] transition">
+              Apertura partite IVA
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali')} class="hover:text-[#0fbe7c] transition">
+              Consulenza e tutela in materia di infortunistica, malasanità e responsabilità bancaria, finanziaria e assicurativa
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/centro-servizi-csu/ricorsi-agenzia-entrate-riscossione')} class="hover:text-[#0fbe7c] transition">
+              Polizze assicurative
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali')} class="hover:text-[#0fbe7c] transition">
+              Consulenza e Assistenza incidenti stradali
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonna 4: CAF E PATRONATO -->
+      <div>
+        <h3 class="font-bold text-[#0fbe7c] text-lg mb-4 uppercase">
+          <a href={getPermalink('/caf-patronato')} class="text-[#0fbe7c] hover:text-[#0ca868] transition">
+            CAF E PATRONATO
+          </a>
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={getPermalink('/caf-patronato/assistenza-immigrazione')} class="hover:text-[#0fbe7c] transition">
+              Assistenza immigrazione
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/caf-patronato/domande-di-pensione')} class="hover:text-[#0fbe7c] transition">
+              Domande di pensione: vecchiaia, reversibilità, anzianità, invalidità civile, accompagnamento
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/caf-patronato/indennita-di-disoccupazione')} class="hover:text-[#0fbe7c] transition">
+              Indennità di disoccupazione
+            </a>
+          </li>
+          <li>
+            <a href={getPermalink('/caf-patronato/modello-730-unico-imu-successioni')} class="hover:text-[#0fbe7c] transition">
+              Modello 730 – unico – imu -successioni
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-gray-600 pt-6 mt-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="text-sm text-gray-400">
+          <Fragment set:html={footNote} />
         </div>
-        <div class="text-sm text-muted flex gap-1">
+        <div class="text-sm text-gray-400">
           {
             secondaryLinks.map(({ text, href }, index) => (
               <>
                 {index !== 0 ? ' · ' : ''}
                 <a
-                  class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                  class="hover:text-[#0fbe7c] transition"
                   href={href}
                   set:html={text}
                 />
@@ -50,54 +224,6 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             ))
           }
         </div>
-      </div>
-      {
-        links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
-            {links && Array.isArray(links) && links.length > 0 && (
-              <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
-                  <li class="mb-2">
-                    <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={href}
-                      aria-label={ariaLabel}
-                    >
-                      <Fragment set:html={text} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))
-      }
-    </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-      {
-        socialLinks?.length ? (
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
-              <li>
-                <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          ''
-        )
-      }
-
-      <div class="text-sm mr-4 dark:text-muted">
-        <Fragment set:html={footNote} />
       </div>
     </div>
   </div>

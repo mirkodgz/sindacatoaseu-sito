@@ -1,0 +1,66 @@
+---
+import { SITE } from 'astrowind:config';
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SINDACATO A.S.E.U.",
+  "alternateName": "Associazione Sindacale Europea Universale",
+  "url": "https://www.sindacatoaseu.it",
+  "logo": "https://www.sindacatoaseu.it/ASEU-logo-definitivo.png",
+  "description": "Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione. Tutela lavoratori, pensioni, ricorsi e servizi CSU.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Mario Pieri, 2",
+    "addressLocality": "Milano",
+    "postalCode": "20127",
+    "addressRegion": "Lombardia",
+    "addressCountry": "IT"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+39-02-2592773",
+      "contactType": "customer service",
+      "areaServed": "IT",
+      "availableLanguage": ["it", "es"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+39-349-6250509",
+      "contactType": "customer service",
+      "areaServed": "IT",
+      "availableLanguage": ["it", "es"]
+    }
+  ],
+  "email": "info@sindacatoaseu.it",
+  "sameAs": []
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SINDACATO A.S.E.U.",
+  "image": "https://www.sindacatoaseu.it/ASEU-logo-definitivo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Mario Pieri, 2",
+    "addressLocality": "Milano",
+    "postalCode": "20127",
+    "addressRegion": "Lombardia",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "45.5019",
+    "longitude": "9.2314"
+  },
+  "url": "https://www.sindacatoaseu.it",
+  "telephone": "+39-02-2592773",
+  "priceRange": "$$"
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+

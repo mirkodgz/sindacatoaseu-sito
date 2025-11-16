@@ -1,0 +1,39 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+
+const servizi = await getCollection('servizi');
+const metadata = {
+  title: 'Servizi — SINDACATO A.S.E.U.',
+  description: 'Servizi sindacali a Milano: ufficio vertenze, controversie lavoro, controllo buste paga, TFR, ricorsi lavoro. Assistenza legale e previdenziale per lavoratori. Consulenza gratuita.',
+  keywords: 'servizi sindacato milano, ufficio vertenze milano, controversie lavoro milano, pratiche disciplinari milano, recuperi crediti lavoro milano, controllo buste paga milano, TFR milano, consulenza legale lavoro milano',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <h1 class="text-3xl font-semibold text-gray-900">Servizi</h1>
+    <p class="mt-4 text-base text-gray-600">
+      I servizi offerti sono i seguenti: Ufficio vertenze, controversie di lavoro, pratiche disciplinari, recuperi crediti di lavoro, controllo buste paga, ricostruzione crediti di lavoro a nero, redazioni e sottoscrizioni di verbali di conciliazione ex Art.411 c.p.c. con deposito presso l'Ispettorato Territoriale del Lavoro.
+    </p>
+
+    <ul class="mt-10 space-y-3">
+      {
+        servizi.map((service) => (
+          <li>
+            <a
+              href={`/servizi/${service.slug}`}
+              class="flex items-center gap-3 text-base text-gray-900 hover:text-[#0fbe7c] transition group"
+            >
+              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-[#0fbe7c] group-hover:bg-[#0ca868] transition"></span>
+              <Icon name="tabler:chevron-right" class="w-4 h-4 text-[#0fbe7c] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span class="flex-grow">{service.data.title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>
+

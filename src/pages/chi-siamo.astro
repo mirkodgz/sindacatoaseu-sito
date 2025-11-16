@@ -1,0 +1,35 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Chi siamo — SINDACATO A.S.E.U.',
+  description: 'Sindacato ASEU Milano: Associazione Sindacale Europea Universale per la tutela diritti dei Lavoratori. Storia, missione e servizi del sindacato a Milano.',
+  keywords: 'sindacato ASEU milano, associazione sindacale europea universale, tutela diritti lavoratori milano, sindacato lavoratori milano, storia sindacato ASEU, chi siamo sindacato milano',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="relative w-full h-[50vh] md:h-[60vh] -mt-[76px] not-prose">
+    <div class="absolute inset-0">
+      <img
+        src="/chi-siamo-hero.webp"
+        alt="Chi siamo SINDACATO A.S.E.U."
+        class="w-full h-full object-cover object-left md:object-center"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-4">Chi siamo</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Chi siamo</h1>
+        <p class="text-base text-gray-700 max-w-3xl mx-auto">
+          Per diritto sindacale si intende il diritto che regola l'attività e l'organizzazione dei Sindacati, ovvero delle Associazioni volontarie dei Lavoratori e dei Datori di lavoro. Il Sindacato, pertanto, è da intendersi come la volontaria e libera associazione dei Lavoratori, alla quale è affidata la tutela degli interessi collettivi di questi. È in quest'ottica che, nel 2016, nasce l'Associazione Sindacale Europea Universale - ASEU, per la tutela diritti dei Lavoratori, a qualsiasi settore essi appartengano.
+        </p>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
