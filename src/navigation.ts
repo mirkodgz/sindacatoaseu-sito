@@ -74,6 +74,10 @@ export const headerData = {
       ],
     },
     {
+      text: 'BLOG',
+      href: getPermalink('/blog'),
+    },
+    {
       text: 'DOVE SIAMO',
       href: getPermalink('/dove-siamo'),
     },
@@ -96,6 +100,7 @@ export const footerData = {
         { text: 'Centro Servizi CSU', href: getPermalink('/centro-servizi-csu') },
         { text: 'CAF e Patronato', href: getPermalink('/caf-patronato') },
         { text: 'Sedi', href: getPermalink('/sedi') },
+        { text: 'Blog', href: getPermalink('/blog') },
         { text: 'Contatti', href: getPermalink('/contatti') },
       ],
     },

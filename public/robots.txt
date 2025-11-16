@@ -1,2 +1,21 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
+
+# Excluir páginas de ejemplo del blog (opcional - descomentar si no quieres indexar el blog)
+# Disallow: /blog/
+# Disallow: /category/
+# Disallow: /tag/
+
+# Permitir todas las páginas importantes
+Allow: /servizi/
+Allow: /caf-patronato/
+Allow: /centro-servizi-csu/
+Allow: /contatti
+Allow: /chi-siamo
+Allow: /sedi
+Allow: /dove-siamo
+Allow: /privacy
+Allow: /cookie

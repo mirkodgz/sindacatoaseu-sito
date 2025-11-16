@@ -2,6 +2,8 @@
 import PageLayout from '~/layouts/PageLayout.astro';
 import { getCollection } from 'astro:content';
 import { getHomePermalink, getPermalink } from '~/utils/permalinks';
+import BreadcrumbSchema from '~/components/common/BreadcrumbSchema.astro';
+import { SITE } from 'astrowind:config';
 
 export async function getStaticPaths() {
   const services = await getCollection('servizi');
@@ -18,13 +20,24 @@ if (!service) {
 }
 
 const { Content } = await service.render();
+const baseUrl = SITE?.site || 'https://www.sindacatoaseu.it';
+const serviceUrl = `${baseUrl}/servizi/${service.slug}`;
+
 const metadata = {
   title: `${service.data.title} — Servizi | SINDACATO A.S.E.U.`,
-  description: 'TODO: testo da inserire',
+  description: `${service.data.title} a Milano. Servizio del SINDACATO A.S.E.U. per assistenza legale e previdenziale. Consulenza gratuita.`,
+  keywords: `sindacato milano, ${service.data.title.toLowerCase()} milano, servizi sindacato milano, assistenza legale lavoro milano`,
 };
+
+const breadcrumbItems = [
+  { name: 'Home', url: `${baseUrl}/` },
+  { name: 'Servizi', url: `${baseUrl}/servizi` },
+  { name: service.data.title, url: serviceUrl },
+];
 ---
 
 <PageLayout metadata={metadata}>
+  <BreadcrumbSchema items={breadcrumbItems} />
   <section class="mx-auto max-w-5xl px-6 py-16">
     <nav class="text-sm text-gray-500">
       <a class="hover:text-[#0fbe7c]" href={getHomePermalink()}>Home</a>
