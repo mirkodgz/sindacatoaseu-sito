@@ -1,4 +1,4 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -28,8 +28,14 @@ export const headerData = {
         { text: 'GESTIONI COLF E BADANTI', href: getPermalink('/servizi/gestioni-colf-e-badanti') },
         { text: 'PRATICHE DISCIPLINARI', href: getPermalink('/servizi/pratiche-disciplinari') },
         { text: 'RECUPERI CREDITI DI LAVORO', href: getPermalink('/servizi/recuperi-crediti-di-lavoro') },
-        { text: 'REDAZIONI DI VERBALI DI CONCILIAZIONE', href: getPermalink('/servizi/redazioni-di-verbali-di-conciliazione') },
-        { text: 'RICOSTRUZIONE CREDITI DI LAVORO A NERO', href: getPermalink('/servizi/ricostruzione-crediti-di-lavoro-a-nero') },
+        {
+          text: 'REDAZIONI DI VERBALI DI CONCILIAZIONE',
+          href: getPermalink('/servizi/redazioni-di-verbali-di-conciliazione'),
+        },
+        {
+          text: 'RICOSTRUZIONE CREDITI DI LAVORO A NERO',
+          href: getPermalink('/servizi/ricostruzione-crediti-di-lavoro-a-nero'),
+        },
         { text: 'UFFICIO VERTENZE', href: getPermalink('/servizi/ufficio-vertenze') },
       ],
     },

@@ -50,11 +50,11 @@ In caso di necessità, i dati connessi al servizio newsletter possono essere tra
 
 Come tutti i siti web anche il presente sito fa uso di **log files** nei quali vengono conservate informazioni raccolte in maniera automatizzata durante le visite degli utenti. Le informazioni raccolte potrebbero essere le seguenti:
 
-- indirizzo Internet protocollo (IP);  
-- tipo di browser e parametri del dispositivo usato per connettersi al sito;  
-- nome dell'internet service provider (ISP);  
-- data e orario di visita;  
-- pagina web di provenienza del visitatore (referral) e di uscita;  
+- indirizzo Internet protocollo (IP);
+- tipo di browser e parametri del dispositivo usato per connettersi al sito;
+- nome dell'internet service provider (ISP);
+- data e orario di visita;
+- pagina web di provenienza del visitatore (referral) e di uscita;
 - eventualmente il numero di click.
 
 Le suddette informazioni sono trattate in forma automatizzata e raccolte in forma esclusivamente aggregata al fine di verificare il corretto funzionamento del sito, e per motivi di sicurezza. Tali informazioni saranno trattate in base ai legittimi interessi del titolare.
@@ -83,10 +83,10 @@ L'utente può gestire i cookie anche attraverso le impostazioni del suo browser.
 
 Per ulteriori informazioni e supporto è possibile anche visitare la pagina di aiuto specifica del web browser che si sta utilizzando:
 
-- Internet Explorer: <http://windows.microsoft.com/en-us/windows-vista/block-or-allow-cookies>  
-- Firefox: <https://support.mozilla.org/en-us/kb/enable-and-disable-cookies-website-preferences>  
-- Safari: <http://www.apple.com/legal/privacy/it>  
-- Chrome: <https://support.google.com/accounts/answer/61416?hl=it>  
+- Internet Explorer: <http://windows.microsoft.com/en-us/windows-vista/block-or-allow-cookies>
+- Firefox: <https://support.mozilla.org/en-us/kb/enable-and-disable-cookies-website-preferences>
+- Safari: <http://www.apple.com/legal/privacy/it>
+- Chrome: <https://support.google.com/accounts/answer/61416?hl=it>
 - Opera: <http://www.opera.com/help/tutorials/security/cookies/>
 
 ### 5 – Plugin Social Network
@@ -103,8 +103,8 @@ L'art. 13, c. 2 del Regolamento UE 2016/679 elenca i diritti dell'utente.
 
 Il sito SINDACATO ASEU intende, pertanto, informare l'utente sull'esistenza:
 
-- del diritto dell'interessato di chiedere al titolare l'accesso ai dati personali (art. 15 Regolamento UE), il loro aggiornamento (art. 7, co. 3, lett. a) D.Lgs. 196/2003), la rettifica (art. 16 Regolamento UE), l'integrazione (art. 7, co. 3, lett. a) D.Lgs. 196/2003) o la limitazione del trattamento che lo riguardino (art. 18 Regolamento UE) o di opporsi, per motivi legittimi, al loro trattamento (art. 21 Regolamento UE), oltre al diritto alla portabilità dei dati (art. 20 Regolamento UE);  
-- del diritto di chiedere la cancellazione (art. 17 Regolamento UE), la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati (art. 7, co. 3, lett. b) D.Lgs. 196/2003);  
+- del diritto dell'interessato di chiedere al titolare l'accesso ai dati personali (art. 15 Regolamento UE), il loro aggiornamento (art. 7, co. 3, lett. a) D.Lgs. 196/2003), la rettifica (art. 16 Regolamento UE), l'integrazione (art. 7, co. 3, lett. a) D.Lgs. 196/2003) o la limitazione del trattamento che lo riguardino (art. 18 Regolamento UE) o di opporsi, per motivi legittimi, al loro trattamento (art. 21 Regolamento UE), oltre al diritto alla portabilità dei dati (art. 20 Regolamento UE);
+- del diritto di chiedere la cancellazione (art. 17 Regolamento UE), la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati (art. 7, co. 3, lett. b) D.Lgs. 196/2003);
 - del diritto di ottenere l'attestazione che le operazioni di aggiornamento, rettificazione, integrazione dei dati, cancellazione, blocco dei dati, trasformazione sono state portate a conoscenza, anche per quanto riguarda il loro contenuto, di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si rivela impossibile o comporta un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato (art. 7, co. 3, lett. c) D.Lgs. 196/2003).
 
 Qualora il trattamento sia basato sull'art. 6, paragrafo 1, lett. a) – consenso espresso all'utilizzo – oppure sull'art. 9, paragrafo 2 lett. a) – consenso espresso all'utilizzo di dati genetici, biometrici, relativi alla salute, che rivelino convinzioni religiose, o filosofiche o appartenenza sindacale, che rivelino l'origine razziale o etnica, le opinioni politiche – l'utente ha il diritto di revocare il consenso in qualsiasi momento senza pregiudicare la liceità del trattamento basata sul consenso prestato prima della revoca.
@@ -133,9 +133,9 @@ Per ciascuna tipologia di dato troverà le informazioni relative alla finalità 
 
 ### Nome, cognome, indirizzo, recapiti telefonici, username
 
-- registrazione account;  
-- fornitura e gestione dei servizi richiesti;  
-- accesso ai servizi;  
+- registrazione account;
+- fornitura e gestione dei servizi richiesti;
+- accesso ai servizi;
 - evasione ordini.
 
 I trattamenti connessi ai servizi web di questo sito hanno luogo presso la sede del Titolare.
@@ -144,7 +144,8 @@ I dati personali sono trattati prevalentemente con strumenti automatizzati. Spec
 
 I dati saranno conservati per il periodo strettamente necessario a conseguire gli scopi per cui sono stati raccolti (ossia, per la durata del rapporto con il cliente, e per la conservazione a fini civilistici, fiscali e contabili).
 
-### Informazioni per la fatturazione e dati di pagamento  
+### Informazioni per la fatturazione e dati di pagamento
+
 (ragione sociale, P. IVA, coordinate bancarie, codice fiscale, indirizzo)
 
 - gestione fiscale e contabile delle transazioni.
@@ -156,10 +157,10 @@ Tali dati saranno conservati per il periodo strettamente necessario a finalizzar
 
 ### Indirizzo e-mail
 
-- registrazione account;  
-- fornitura del servizio richiesto;  
-- invio di informazioni e altre attività necessarie alla conclusione o all'esecuzione di contratti di cui è parte l'interessato;  
-- invio di newsletter in caso di registrazione al relativo servizio;  
+- registrazione account;
+- fornitura del servizio richiesto;
+- invio di informazioni e altre attività necessarie alla conclusione o all'esecuzione di contratti di cui è parte l'interessato;
+- invio di newsletter in caso di registrazione al relativo servizio;
 - con il suo consenso, invio di informazioni commerciali anche via e-mail, per proporre nostri prodotti o servizi, per condurre indagini sul grado di soddisfazione della clientela.
 
 I trattamenti connessi ai servizi web di questo sito hanno luogo presso la sede del Titolare.
@@ -170,8 +171,8 @@ Tali dati saranno conservati per il periodo strettamente necessario a conseguire
 
 ### Indirizzo IP e dati di navigazione
 
-- navigazione sul sito;  
-- installazione di cookie tecnici di sessione per migliorare le funzionalità del sito;  
+- navigazione sul sito;
+- installazione di cookie tecnici di sessione per migliorare le funzionalità del sito;
 - accesso ai servizi.
 
 I dati sono trattati sulla base della necessità di fornire gli strumenti necessari per visitare il sito ed accedervi alle funzionalità messe a disposizione.
@@ -218,7 +219,7 @@ Il rifiuto a fornire il consenso comporta l'impossibilità di ottenere il serviz
 ## MODIFICHE AL PRESENTE DOCUMENTO
 
 Il presente documento, pubblicato all'indirizzo:  
-**https://sindacatoaseu.it/privacy-policy/**  
+**https://sindacatoaseu.it/privacy-policy/**
 
 costituisce la privacy policy di questo sito.
 

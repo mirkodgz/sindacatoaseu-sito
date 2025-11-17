@@ -1,8 +1,8 @@
 ---
-title: "Ricostruzione crediti di lavoro a nero"
-slug: "ricostruzione-crediti-di-lavoro-a-nero"
-category: "servizi"
-image: ""
+title: 'Ricostruzione crediti di lavoro a nero'
+slug: 'ricostruzione-crediti-di-lavoro-a-nero'
+category: 'servizi'
+image: ''
 ---
 
 Il lavoro nero, sommerso o irregolare si presenta sotto svariate forme e con molte sfaccettature. A titolo di esempio, si passa da situazioni di totale irregolarità e conseguente evasione contributiva e fiscale, a casi in cui il rapporto è solo in parte regolarizzato, oppure viene formalizzato con tipologie contrattuali diverse dalle effettive modalità con le quali si svolge.

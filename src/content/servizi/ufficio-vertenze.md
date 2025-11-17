@@ -1,8 +1,8 @@
 ---
-title: "Ufficio vertenze"
-slug: "ufficio-vertenze"
-category: "servizi"
-image: ""
+title: 'Ufficio vertenze'
+slug: 'ufficio-vertenze'
+category: 'servizi'
+image: ''
 ---
 
 L'Ufficio Vertenze del SINDACATO ASEU, si occupa delle principali problematiche sorte durante lo svolgimento o la cessazione del rapporto di lavoro, di qualsiasi realtà lavorativa del settore privato.

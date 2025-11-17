@@ -3,6 +3,7 @@
 ## ✅ **IMPLEMENTADO**
 
 ### 1. **Botón WhatsApp Flotante**
+
 - ✅ Botón flotante verde de WhatsApp en la esquina inferior derecha
 - ✅ Número: +39 349.6250509
 - ✅ Mensaje predefinido en italiano
@@ -10,12 +11,14 @@
 - ✅ Responsive (se adapta a mobile)
 
 ### 2. **Animaciones Sutiles**
+
 - ✅ View Transitions habilitadas (transiciones suaves entre páginas)
 - ✅ Animaciones fadeInUp para elementos al hacer scroll
 - ✅ Transiciones suaves en hover (botones, enlaces)
 - ✅ Smooth scroll habilitado
 
 ### 3. **SEO Básico**
+
 - ✅ Meta description optimizada
 - ✅ Open Graph configurado
 - ✅ Estructura semántica HTML5
@@ -28,22 +31,26 @@
 ### 🎨 **1. ANIMACIONES Y UX**
 
 #### **A. Animaciones al Scroll (Intersection Observer)**
+
 ```javascript
 // Agregar animaciones cuando los elementos entran en viewport
 // Ejemplo: Las tarjetas de servicios aparecen con fadeInUp al hacer scroll
 ```
 
 **Beneficios:**
+
 - Página más dinámica y moderna
 - Mejora la percepción de calidad
 - Guía la atención del usuario
 
 #### **B. Micro-interacciones**
+
 - Hover effects en botones (ya implementado parcialmente)
 - Loading states en formularios
 - Feedback visual en acciones del usuario
 
 #### **C. Transiciones de Página**
+
 - ✅ Ya implementado con View Transitions de Astro
 - Las transiciones son suaves y profesionales
 
@@ -52,6 +59,7 @@
 ### 🔍 **2. SEO AVANZADO**
 
 #### **A. Schema.org / Structured Data**
+
 ```json
 {
   "@context": "https://schema.org",
@@ -77,25 +85,33 @@
 ```
 
 **Beneficios:**
+
 - Rich snippets en Google (estrellas, horarios, etc.)
 - Mejor visibilidad en búsquedas locales
 - Panel de conocimiento en Google
 
 #### **B. Open Graph Image Personalizada**
+
 - Crear imagen 1200x628px con logo y texto clave
 - Usar para compartir en redes sociales
 - Mejor CTR en Facebook, LinkedIn, WhatsApp
 
 #### **C. Keywords Meta Tags**
+
 ```html
-<meta name="keywords" content="sindacato milano, CAF milano, patronato milano, assistenza fiscale, consulenza legale lavoro, pensione, immigrazione, TFR, buste paga">
+<meta
+  name="keywords"
+  content="sindacato milano, CAF milano, patronato milano, assistenza fiscale, consulenza legale lavoro, pensione, immigrazione, TFR, buste paga"
+/>
 ```
 
 #### **D. Sitemap.xml y robots.txt**
+
 - ✅ Ya configurado automáticamente por Astro
 - Verificar que esté generado correctamente
 
 #### **E. Canonical URLs**
+
 - ✅ Ya implementado en Metadata.astro
 - Asegurar que cada página tenga su canonical correcto
 
@@ -104,6 +120,7 @@
 ### 📱 **3. COMPARTIR EN REDES SOCIALES**
 
 #### **A. Open Graph Tags Mejorados**
+
 ```yaml
 # Ya configurado en config.yaml, pero mejorar:
 - Agregar imagen específica por página
@@ -112,10 +129,12 @@
 ```
 
 #### **B. Twitter Cards**
+
 - ✅ Ya configurado
 - Usar `summary_large_image` para mejor visualización
 
 #### **C. WhatsApp Preview**
+
 - El botón ya está implementado
 - Mejorar preview compartiendo: crear imagen OG específica
 
@@ -139,14 +158,17 @@
 #### **Ejemplos de H1 Optimizados:**
 
 **Homepage:**
+
 - ✅ Actual: "SINDACATO ASEU"
 - 💡 Sugerencia: "SINDACATO ASEU - CAF e Patronato Milano"
 
 **Servizi:**
+
 - ✅ Actual: "Servizi"
 - 💡 Sugerencia: "Servizi Sindacato - Assistenza Legale e Lavoro Milano"
 
 **CAF:**
+
 - ✅ Actual: "CAF e Patronato"
 - 💡 Sugerencia: "CAF e Patronato Milano - Modello 730 e Pensioni"
 
@@ -155,29 +177,34 @@
 ### 🚀 **5. MEJORAS ADICIONALES RECOMENDADAS**
 
 #### **A. Performance**
+
 - ✅ Imágenes optimizadas (Astro Image)
 - 💡 Lazy loading en imágenes (ya implementado parcialmente)
 - 💡 Preload de fuentes críticas (ya implementado)
 - 💡 Minificación de CSS/JS (automático en build)
 
 #### **B. Accesibilidad (A11y)**
+
 - ✅ Alt text en imágenes
 - 💡 Agregar `aria-label` en botones sin texto
 - 💡 Contraste de colores (verificar WCAG AA)
 - 💡 Navegación por teclado funcional
 
 #### **C. Analytics**
+
 - 💡 Google Analytics 4 (configurar en `config.yaml`)
 - 💡 Google Search Console (ya verificado)
 - 💡 Facebook Pixel (si usan Facebook Ads)
 
 #### **D. Conversión**
+
 - ✅ Botón WhatsApp (ya implementado)
 - 💡 Formulario de contacto mejorado
 - 💡 Call-to-action más prominentes
 - 💡 Testimonios o casos de éxito
 
 #### **E. Contenido**
+
 - 💡 Blog con artículos sobre derechos laborales
 - 💡 FAQ section
 - 💡 Guías descargables (PDF)
@@ -209,15 +236,18 @@
 ### 🎨 **7. DISEÑO Y BRANDING**
 
 #### **Colores (Ya implementado):**
+
 - ✅ Verde ASEU: #0fbe7c
 - ✅ Texto: #000000
 - ✅ Fondo: #fbfbfb
 
 #### **Tipografía:**
+
 - ✅ Titillium Web (ya implementado)
 - ✅ Tamaños consistentes (16px base)
 
 #### **Sugerencias:**
+
 - 💡 Agregar más espacio en blanco (whitespace)
 - 💡 Iconos consistentes (usar astro-icon)
 - 💡 Sombras sutiles para profundidad
@@ -227,6 +257,7 @@
 ## 🛠️ **PRÓXIMOS PASOS SUGERIDOS**
 
 ### **Prioridad ALTA:**
+
 1. ✅ Botón WhatsApp (COMPLETADO)
 2. ✅ Animaciones básicas (COMPLETADO)
 3. 🔲 Crear imagen Open Graph personalizada (1200x628px)
@@ -234,12 +265,14 @@
 5. 🔲 Optimizar H1 con keywords
 
 ### **Prioridad MEDIA:**
+
 6. 🔲 Configurar Google Analytics 4
 7. 🔲 Agregar FAQ section
 8. 🔲 Mejorar formulario de contacto
 9. 🔲 Agregar testimonios
 
 ### **Prioridad BAJA:**
+
 10. 🔲 Blog con artículos
 11. 🔲 Guías descargables
 12. 🔲 Casos de éxito
@@ -265,6 +298,5 @@
 
 ---
 
-**¿Necesitas ayuda implementando alguna de estas recomendaciones?** 
+**¿Necesitas ayuda implementando alguna de estas recomendaciones?**
 Puedo ayudarte con cualquier punto específico. 🚀
-

@@ -14,7 +14,8 @@ const metadata = {
   <section class="mx-auto max-w-5xl px-6 py-16">
     <h1 class="text-3xl font-semibold text-gray-900">Centro Servizi CSU</h1>
     <p class="mt-4 text-base text-gray-600">
-      Dispone di un centro servizi CSU – che offre i seguenti servizi: consulenza e assistenza incidenti stradali, ricorsi contro Agenzia Entrate Riscossione, Visure camerali, apertura partite IVA, Polizze assicurative.
+      Dispone di un centro servizi CSU – che offre i seguenti servizi: consulenza e assistenza incidenti stradali,
+      ricorsi contro Agenzia Entrate Riscossione, Visure camerali, apertura partite IVA, Polizze assicurative.
     </p>
 
     <ul class="mt-10 space-y-3">
@@ -25,8 +26,11 @@ const metadata = {
               href={`/centro-servizi-csu/${service.slug}`}
               class="flex items-center gap-3 text-base text-gray-900 hover:text-[#0fbe7c] transition group"
             >
-              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-[#0fbe7c] group-hover:bg-[#0ca868] transition"></span>
-              <Icon name="tabler:chevron-right" class="w-4 h-4 text-[#0fbe7c] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-[#0fbe7c] group-hover:bg-[#0ca868] transition" />
+              <Icon
+                name="tabler:chevron-right"
+                class="w-4 h-4 text-[#0fbe7c] opacity-0 group-hover:opacity-100 transition-opacity"
+              />
               <span class="flex-grow">{service.data.title}</span>
             </a>
           </li>
@@ -35,4 +39,3 @@ const metadata = {
     </ul>
   </section>
 </PageLayout>
-

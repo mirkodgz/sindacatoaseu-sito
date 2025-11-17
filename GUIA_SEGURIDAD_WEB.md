@@ -5,36 +5,43 @@
 ### **1. Security Headers (Headers de Seguridad)**
 
 #### **A. Content Security Policy (CSP)**
+
 - ✅ **Implementado**: Protege contra XSS (Cross-Site Scripting)
 - **Configuración**: Permite solo recursos de fuentes confiables
 - **Bloquea**: Scripts maliciosos, inyecciones de código
 
 #### **B. X-Frame-Options**
+
 - ✅ **Implementado**: `SAMEORIGIN`
 - **Protege contra**: Clickjacking
 - **Permite**: Que tu sitio se muestre en iframes solo desde tu dominio
 
 #### **C. X-Content-Type-Options**
+
 - ✅ **Implementado**: `nosniff`
 - **Protege contra**: MIME type sniffing
 - **Previene**: Ejecución de archivos con tipo MIME incorrecto
 
 #### **D. X-XSS-Protection**
+
 - ✅ **Implementado**: `1; mode=block`
 - **Protege contra**: Cross-Site Scripting (XSS)
 - **Activa**: Protección XSS del navegador
 
 #### **E. Referrer-Policy**
+
 - ✅ **Implementado**: `strict-origin-when-cross-origin`
 - **Controla**: Qué información de referrer se envía
 - **Protege**: Privacidad de los usuarios
 
 #### **F. Permissions-Policy**
+
 - ✅ **Implementado**: Bloquea geolocalización, micrófono, cámara
 - **Protege contra**: Acceso no autorizado a características del navegador
 - **Previene**: Tracking no deseado
 
 #### **G. Strict-Transport-Security (HSTS)**
+
 - ✅ **Implementado**: `max-age=31536000; includeSubDomains; preload`
 - **Fuerza**: Conexiones HTTPS
 - **Protege contra**: Ataques de downgrade a HTTP
@@ -99,7 +106,8 @@ npm update
 ### **4. Enlaces Externos**
 
 **Riesgo**: Bajo  
-**Recomendación**: 
+**Recomendación**:
+
 - Usar `rel="noopener noreferrer"` en enlaces externos
 - Verificar que los enlaces sean seguros
 
@@ -108,30 +116,37 @@ npm update
 ## 🚨 **ATAQUES COMUNES Y PROTECCIÓN**
 
 ### **1. XSS (Cross-Site Scripting)**
+
 - ✅ **Protegido**: CSP configurado
 - ✅ **Protegido**: X-XSS-Protection activado
 - ✅ **Protegido**: Astro escapa automáticamente el contenido
 
 ### **2. Clickjacking**
+
 - ✅ **Protegido**: X-Frame-Options: SAMEORIGIN
 - ✅ **Protegido**: CSP frame-ancestors
 
 ### **3. MIME Sniffing**
+
 - ✅ **Protegido**: X-Content-Type-Options: nosniff
 
 ### **4. Man-in-the-Middle (MITM)**
+
 - ✅ **Protegido**: HSTS (Strict-Transport-Security)
 - ✅ **Protegido**: HTTPS obligatorio
 
 ### **5. SQL Injection**
+
 - ✅ **No aplicable**: No hay base de datos
 - ✅ **No aplicable**: Sitio estático
 
 ### **6. CSRF (Cross-Site Request Forgery)**
+
 - ✅ **No aplicable**: No hay formularios
 - ✅ **No aplicable**: No hay autenticación
 
 ### **7. DDoS (Denial of Service)**
+
 - ⚠️ **Mitigación**: Depende del hosting (Vercel/Netlify tienen protección)
 - 💡 **Recomendación**: Usar CDN con protección DDoS
 
@@ -170,22 +185,27 @@ npm update
 ## 🔍 **HERRAMIENTAS DE VERIFICACIÓN**
 
 ### **1. Security Headers Check:**
+
 - **URL**: https://securityheaders.com/
 - **Uso**: Verifica que todos los headers estén configurados
 
 ### **2. SSL Labs:**
+
 - **URL**: https://www.ssllabs.com/ssltest/
 - **Uso**: Verifica la configuración SSL/TLS
 
 ### **3. Observatory by Mozilla:**
+
 - **URL**: https://observatory.mozilla.org/
 - **Uso**: Análisis completo de seguridad
 
 ### **4. Sucuri SiteCheck:**
+
 - **URL**: https://sitecheck.sucuri.net/
 - **Uso**: Escanea malware y vulnerabilidades
 
 ### **5. Google Safe Browsing:**
+
 - **URL**: https://transparencyreport.google.com/safe-browsing/search
 - **Uso**: Verifica si tu sitio está marcado como peligroso
 
@@ -196,6 +216,7 @@ npm update
 ### **Vercel (Recomendado):**
 
 Ya configurado en `vercel.json`:
+
 - ✅ Security headers
 - ✅ Cache headers
 - ✅ HTTPS automático
@@ -203,6 +224,7 @@ Ya configurado en `vercel.json`:
 ### **Netlify:**
 
 Ya configurado en `netlify.toml`:
+
 - ✅ Security headers
 - ✅ Cache headers
 - ✅ HTTPS automático
@@ -212,6 +234,7 @@ Ya configurado en `netlify.toml`:
 Si usas otro servidor (Apache, Nginx), configura:
 
 **Apache (.htaccess):**
+
 ```apache
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
@@ -223,6 +246,7 @@ Si usas otro servidor (Apache, Nginx), configura:
 ```
 
 **Nginx:**
+
 ```nginx
 add_header X-Content-Type-Options "nosniff";
 add_header X-Frame-Options "SAMEORIGIN";
@@ -236,18 +260,21 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 ## 🔄 **MANTENIMIENTO DE SEGURIDAD**
 
 ### **Mensual:**
+
 1. ✅ Actualizar dependencias: `npm update`
 2. ✅ Verificar security headers: https://securityheaders.com/
 3. ✅ Revisar logs de acceso
 4. ✅ Verificar certificado SSL
 
 ### **Trimestral:**
+
 1. ✅ Auditoría de seguridad completa
 2. ✅ Revisar y actualizar CSP si es necesario
 3. ✅ Verificar que no haya vulnerabilidades conocidas
 4. ✅ Revisar permisos de acceso
 
 ### **Anual:**
+
 1. ✅ Auditoría de seguridad profesional (opcional)
 2. ✅ Revisar y actualizar políticas de seguridad
 3. ✅ Capacitación del equipo (si aplica)
@@ -290,6 +317,7 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 ### **Riesgo de ser hackeado: MUY BAJO**
 
 **Razones:**
+
 - No hay servidor backend que atacar
 - No hay base de datos que explotar
 - No hay formularios que inyectar
@@ -301,17 +329,20 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 ## 💡 **RECOMENDACIONES FINALES**
 
 ### **Prioridad ALTA:**
+
 1. ✅ Security headers (YA IMPLEMENTADO)
 2. ✅ HTTPS/HSTS (YA CONFIGURADO)
 3. 💡 Configurar WAF en el hosting (si está disponible)
 4. 💡 Monitorear logs regularmente
 
 ### **Prioridad MEDIA:**
+
 5. 💡 Actualizar dependencias mensualmente
 6. 💡 Verificar security headers trimestralmente
 7. 💡 Hacer backups regulares
 
 ### **Prioridad BAJA:**
+
 8. 💡 Auditoría de seguridad profesional (anual)
 9. 💡 Configurar alertas de seguridad
 10. 💡 Documentar políticas de seguridad
@@ -333,6 +364,7 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 **Riesgo de ser hackeado: MUY BAJO** 🛡️
 
 **Próximos pasos:**
+
 1. Verificar headers en https://securityheaders.com/
 2. Configurar WAF si está disponible
 3. Monitorear logs regularmente
@@ -341,4 +373,3 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 ---
 
 **¿Necesitas ayuda con alguna configuración adicional de seguridad?** Puedo ayudarte a implementar medidas adicionales si es necesario. 🔒
-

@@ -1,8 +1,8 @@
 ---
-title: "Apertura Partite IVA"
-slug: "apertura-partite-iva"
-category: "csu"
-image: ""
+title: 'Apertura Partite IVA'
+slug: 'apertura-partite-iva'
+category: 'csu'
+image: ''
 ---
 
 Aprire la partita iva è il modo più vantaggioso ed economico per iniziare a lavorare come liberi professionisti, artigiani o commercianti.

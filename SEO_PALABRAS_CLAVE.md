@@ -12,6 +12,7 @@
 ## 🎯 **PALABRAS CLAVE PRINCIPALES**
 
 ### **Keywords Primarias (Alta Prioridad):**
+
 ```
 sindacato milano
 CAF milano
@@ -29,6 +30,7 @@ ufficio vertenze milano
 ```
 
 ### **Keywords Secundarias (Media Prioridad):**
+
 ```
 sindacato lavoratori milano
 CAF patronato milano
@@ -43,6 +45,7 @@ consulenza lavoro milano
 ```
 
 ### **Keywords de Cola Larga (Long-tail):**
+
 ```
 sindacato assistenza lavoratori milano
 CAF modello 730 milano
@@ -61,53 +64,60 @@ sindacato ASEU milano centro
 ## 📄 **PALABRAS CLAVE POR PÁGINA**
 
 ### **Homepage (`/`):**
+
 ```
-sindacato milano, CAF milano, patronato milano, assistenza fiscale milano, 
-consulenza legale lavoro milano, pensione milano, immigrazione milano, 
+sindacato milano, CAF milano, patronato milano, assistenza fiscale milano,
+consulenza legale lavoro milano, pensione milano, immigrazione milano,
 TFR milano, buste paga milano, sindacato ASEU, assistenza previdenziale milano
 ```
 
 ### **Servizi (`/servizi`):**
+
 ```
-servizi sindacato milano, ufficio vertenze milano, controversie lavoro milano, 
-pratiche disciplinari milano, recuperi crediti lavoro milano, controllo buste paga milano, 
-ricostruzione crediti lavoro nero milano, verbali conciliazione milano, 
+servizi sindacato milano, ufficio vertenze milano, controversie lavoro milano,
+pratiche disciplinari milano, recuperi crediti lavoro milano, controllo buste paga milano,
+ricostruzione crediti lavoro nero milano, verbali conciliazione milano,
 conteggi TFR milano, consulenza legale lavoro milano, gestioni colf badanti milano
 ```
 
 ### **CAF e Patronato (`/caf-patronato`):**
+
 ```
-CAF milano, patronato milano, modello 730 milano, modello unico milano, 
-IMU milano, successioni milano, domande pensione milano, pensione vecchiaia milano, 
-pensione reversibilità milano, pensione invalidità civile milano, 
+CAF milano, patronato milano, modello 730 milano, modello unico milano,
+IMU milano, successioni milano, domande pensione milano, pensione vecchiaia milano,
+pensione reversibilità milano, pensione invalidità civile milano,
 indennità disoccupazione milano, assistenza immigrazione milano
 ```
 
 ### **Centro Servizi CSU (`/centro-servizi-csu`):**
+
 ```
-centro servizi CSU milano, ricorsi agenzia entrate milano, ricorsi equitalia milano, 
-infortunistica milano, malasanità milano, incidenti stradali milano, 
+centro servizi CSU milano, ricorsi agenzia entrate milano, ricorsi equitalia milano,
+infortunistica milano, malasanità milano, incidenti stradali milano,
 apertura partita IVA milano, visure camerali milano, consulenza assicurativa milano
 ```
 
 ### **Chi Siamo (`/chi-siamo`):**
+
 ```
-sindacato ASEU milano, associazione sindacale europea universale, 
-tutela diritti lavoratori milano, sindacato lavoratori milano, 
+sindacato ASEU milano, associazione sindacale europea universale,
+tutela diritti lavoratori milano, sindacato lavoratori milano,
 storia sindacato ASEU, chi siamo sindacato milano
 ```
 
 ### **Contatti (`/contatti`):**
+
 ```
-contatti sindacato milano, telefono sindacato ASEU, email sindacato milano, 
-indirizzo sindacato milano, sede sindacato ASEU milano, 
+contatti sindacato milano, telefono sindacato ASEU, email sindacato milano,
+indirizzo sindacato milano, sede sindacato ASEU milano,
 come contattare sindacato milano
 ```
 
 ### **Sedi (`/sedi`):**
+
 ```
-sedi sindacato milano, uffici sindacato ASEU, sedi CAF milano, 
-sede nazionale sindacato milano, segreteria provinciale milano, 
+sedi sindacato milano, uffici sindacato ASEU, sedi CAF milano,
+sede nazionale sindacato milano, segreteria provinciale milano,
 sede sindacato monza, sede sindacato novara
 ```
 
@@ -125,18 +135,22 @@ sede sindacato monza, sede sindacato novara
 ### **Ejemplos Optimizados:**
 
 **Homepage:**
+
 - ✅ Actual: "SINDACATO ASEU"
 - 💡 Optimizado: "SINDACATO ASEU - CAF e Patronato Milano"
 
 **Servizi:**
+
 - ✅ Actual: "Servizi"
 - 💡 Optimizado: "Servizi Sindacato - Assistenza Legale e Lavoro Milano"
 
 **CAF:**
+
 - ✅ Actual: "CAF e Patronato"
 - 💡 Optimizado: "CAF e Patronato Milano - Modello 730 e Pensioni"
 
 **Chi Siamo:**
+
 - ✅ Actual: "Chi siamo"
 - 💡 Optimizado: "Chi Siamo - Sindacato ASEU Milano"
 
@@ -154,20 +168,23 @@ sede sindacato monza, sede sindacato novara
 ### **Ejemplos:**
 
 **Homepage:**
+
 ```
-Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione. 
+Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione.
 Tutela lavoratori, pensioni, ricorsi e servizi CSU. Contattaci per una consulenza gratuita.
 ```
 
 **Servizi:**
+
 ```
-Servizi sindacali a Milano: ufficio vertenze, controversie lavoro, controllo buste paga, 
+Servizi sindacali a Milano: ufficio vertenze, controversie lavoro, controllo buste paga,
 TFR, ricorsi lavoro. Assistenza legale e previdenziale per lavoratori. Consulenza gratuita.
 ```
 
 **CAF:**
+
 ```
-CAF e Patronato a Milano. Modello 730, Unico, IMU, domande pensione, indennità disoccupazione, 
+CAF e Patronato a Milano. Modello 730, Unico, IMU, domande pensione, indennità disoccupazione,
 assistenza immigrazione. Servizi fiscali e previdenziali professionali.
 ```
 
@@ -203,6 +220,7 @@ assistenza immigrazione. Servizi fiscali e previdenziali professionali.
 6. 💡 **Agregar reseñas/testimonios**
 
 ### **Keywords Locales:**
+
 ```
 sindacato zona 2 milano
 sindacato crescenzo milano
@@ -250,6 +268,7 @@ Enlaces internos: Anchor text con keywords
 ### **Verificación:**
 
 Usa estas herramientas para verificar:
+
 - Google Search Console
 - Google Rich Results Test
 - Facebook Debugger
@@ -260,6 +279,7 @@ Usa estas herramientas para verificar:
 ## 🚀 **PRÓXIMOS PASOS RECOMENDADOS**
 
 ### **Prioridad ALTA:**
+
 1. ✅ Keywords configuradas (COMPLETADO)
 2. ✅ Open Graph image (COMPLETADO)
 3. 🔲 Optimizar H1 con keywords
@@ -267,6 +287,7 @@ Usa estas herramientas para verificar:
 5. 🔲 Agregar contenido único por página
 
 ### **Prioridad MEDIA:**
+
 6. 🔲 Crear blog con artículos SEO
 7. 🔲 Agregar FAQ section
 8. 🔲 Optimizar imágenes con alt text
@@ -274,6 +295,7 @@ Usa estas herramientas para verificar:
 10. 🔲 Agregar breadcrumbs estructurados
 
 ### **Prioridad BAJA:**
+
 11. 🔲 Crear contenido multimedia (videos)
 12. 🔲 Agregar testimonios/reseñas
 13. 🔲 Crear guías descargables
@@ -320,7 +342,7 @@ Usa estas herramientas para verificar:
 
 ```
 sindacato milano
-CAF milano  
+CAF milano
 patronato milano
 assistenza fiscale milano
 consulenza legale lavoro milano
@@ -337,4 +359,3 @@ ufficio vertenze milano
 ---
 
 **¿Necesitas ayuda implementando alguna de estas optimizaciones?** Puedo ayudarte a optimizar H1, descripciones, o crear contenido SEO específico. 🚀
-

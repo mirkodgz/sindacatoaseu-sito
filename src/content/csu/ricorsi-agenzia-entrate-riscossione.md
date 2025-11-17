@@ -1,8 +1,8 @@
 ---
-title: "Ricorsi contro Agenzia Entrate Riscossione"
-slug: "ricorsi-agenzia-entrate-riscossione"
-category: "csu"
-image: ""
+title: 'Ricorsi contro Agenzia Entrate Riscossione'
+slug: 'ricorsi-agenzia-entrate-riscossione'
+category: 'csu'
+image: ''
 ---
 
 Innanzitutto, deve essere il contribuente a dover ritenere che la richiesta contenuta nella cartella di pagamento indirizzata da Agenzia Entrate Riscossione (ex Equitalia) non sia dovuta. In tal caso deve rivolgersi all'ente creditore per ottenere il cosiddetto 'sgravio', ossia il provvedimento che annulla, in tutto o in parte, l'ordine di riscuotere le somme iscritte a ruolo.

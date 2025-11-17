@@ -1,8 +1,8 @@
 ---
-title: "Modello 730 – Unico – Imu – Successioni"
-slug: "modello-730-unico-imu-successioni"
-category: "caf"
-image: ""
+title: 'Modello 730 – Unico – Imu – Successioni'
+slug: 'modello-730-unico-imu-successioni'
+category: 'caf'
+image: ''
 ---
 
 ## Modello 730

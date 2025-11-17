@@ -3,16 +3,19 @@
 ## ✅ **ESPECIFICACIONES TÉCNICAS**
 
 ### **Medidas Recomendadas:**
+
 - **Tamaño:** `1200 x 630 píxeles` (o `1200 x 628px`)
 - **Proporción:** `1.91:1` (ancho:alto)
 - **Tamaño de archivo:** Máximo 8MB (recomendado: menos de 1MB)
 
 ### **Formato:**
+
 - ✅ **PNG** (recomendado) - Soporta transparencia
 - ✅ **JPG/JPEG** - Buena compresión, sin transparencia
 - ⚠️ **WebP** - Funciona pero algunos servicios pueden no soportarlo bien
 
 ### **Ubicación:**
+
 - ✅ **Debe estar en:** `public/og-image.png` (o `public/og-image.jpg`)
 - ✅ **Ya está configurado en:** `src/config.yaml`
 
@@ -21,6 +24,7 @@
 ## 🎨 **DISEÑO RECOMENDADO**
 
 ### **Elementos que debe incluir:**
+
 1. **Logo de SINDACATO ASEU** (centrado o a la izquierda)
 2. **Texto principal:** "SINDACATO ASEU"
 3. **Subtítulo:** "Associazione Sindacale Europea Universale"
@@ -29,6 +33,7 @@
 6. **Información de contacto:** Teléfono o email (opcional)
 
 ### **Ejemplo de Layout:**
+
 ```
 ┌─────────────────────────────────────┐
 │                                     │
@@ -51,6 +56,7 @@
 ## 📋 **PASOS PARA CREAR LA IMAGEN**
 
 ### **Opción 1: Usando Canva (Recomendado)**
+
 1. Ve a [canva.com](https://www.canva.com)
 2. Crea un diseño personalizado: `1200 x 630 px`
 3. Agrega el logo de ASEU
@@ -60,6 +66,7 @@
 7. Guarda en `public/og-image.png`
 
 ### **Opción 2: Usando Photoshop/GIMP**
+
 1. Crea un nuevo documento: `1200 x 630 px`
 2. Resolución: 72 DPI (suficiente para web)
 3. Agrega el logo y texto
@@ -67,6 +74,7 @@
 5. Guarda en `public/og-image.png`
 
 ### **Opción 3: Usando herramientas online**
+
 - [Social Share Preview](https://socialsharepreview.com/)
 - [Meta Tags](https://metatags.io/)
 - [Open Graph Image Generator](https://www.opengraph.xyz/)
@@ -88,6 +96,7 @@ openGraph:
 ```
 
 **Solo necesitas:**
+
 1. Crear la imagen con las especificaciones arriba
 2. Guardarla como `public/og-image.png` (o `.jpg`)
 3. ¡Listo! Se usará automáticamente
@@ -123,19 +132,23 @@ openGraph:
 ## 📱 **CÓMO SE VE EN CADA RED SOCIAL**
 
 ### **Facebook:**
+
 - Muestra la imagen completa (1200x630)
 - Título y descripción debajo
 
 ### **Twitter:**
+
 - Muestra la imagen completa
 - Título y descripción debajo
 - Usa `summary_large_image` (ya configurado)
 
 ### **LinkedIn:**
+
 - Muestra la imagen completa
 - Título y descripción debajo
 
 ### **WhatsApp:**
+
 - Muestra la imagen completa
 - Título y descripción debajo
 
@@ -166,9 +179,9 @@ const metadata = {
         url: '/og-image-servizi.png',
         width: 1200,
         height: 630,
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
 ---
 ```
@@ -186,4 +199,3 @@ const metadata = {
 ---
 
 **¿Necesitas ayuda para crear la imagen?** Puedo ayudarte con el diseño o recomendarte herramientas específicas. 🎨
-

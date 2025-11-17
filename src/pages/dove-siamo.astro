@@ -58,51 +58,62 @@ const sedeNazionale = {
           <div class="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
             <div class="text-4xl mb-6">{sedeNazionale.icon}</div>
             <h2 class="text-2xl font-bold text-gray-900 mb-6">{sedeNazionale.title}</h2>
-            
+
             <div class="space-y-4 text-gray-700 text-base">
               <p>
                 <span class="font-semibold text-gray-900">Associazione:</span> Associazione Sindacale Europea Universale
               </p>
-              {sedeNazionale.ref && (
-                <p>
-                  <span class="font-semibold text-gray-900">Referente:</span> {sedeNazionale.ref}
-                </p>
-              )}
+              {
+                sedeNazionale.ref && (
+                  <p>
+                    <span class="font-semibold text-gray-900">Referente:</span> {sedeNazionale.ref}
+                  </p>
+                )
+              }
               <p>
-                <span class="font-semibold text-gray-900">Indirizzo:</span> {sedeNazionale.address}
+                <span class="font-semibold text-gray-900">Indirizzo:</span>
+                {sedeNazionale.address}
               </p>
-              {sedeNazionale.phoneDisplay && (
-                <p>
-                  <span class="font-semibold text-gray-900">Telefono:</span>{' '}
-                  <a href={`tel:${sedeNazionale.phoneLink}`} class="text-[#0fbe7c] hover:underline">
-                    {sedeNazionale.phoneDisplay}
-                  </a>
-                </p>
-              )}
-              {sedeNazionale.cellDisplay && (
-                <p>
-                  <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
-                  <a href={`tel:${sedeNazionale.cellLink}`} class="text-[#0fbe7c] hover:underline">
-                    {sedeNazionale.cellDisplay}
-                  </a>
-                </p>
-              )}
-              {sedeNazionale.cellDisplay2 && (
-                <p>
-                  <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
-                  <a href={`tel:${sedeNazionale.cellLink2}`} class="text-[#0fbe7c] hover:underline">
-                    {sedeNazionale.cellDisplay2}
-                  </a>
-                </p>
-              )}
-              {sedeNazionale.email && (
-                <p>
-                  <span class="font-semibold text-gray-900">Email:</span>{' '}
-                  <a href={`mailto:${sedeNazionale.email}`} class="text-[#0fbe7c] hover:underline">
-                    {sedeNazionale.email}
-                  </a>
-                </p>
-              )}
+              {
+                sedeNazionale.phoneDisplay && (
+                  <p>
+                    <span class="font-semibold text-gray-900">Telefono:</span>{' '}
+                    <a href={`tel:${sedeNazionale.phoneLink}`} class="text-[#0fbe7c] hover:underline">
+                      {sedeNazionale.phoneDisplay}
+                    </a>
+                  </p>
+                )
+              }
+              {
+                sedeNazionale.cellDisplay && (
+                  <p>
+                    <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
+                    <a href={`tel:${sedeNazionale.cellLink}`} class="text-[#0fbe7c] hover:underline">
+                      {sedeNazionale.cellDisplay}
+                    </a>
+                  </p>
+                )
+              }
+              {
+                sedeNazionale.cellDisplay2 && (
+                  <p>
+                    <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
+                    <a href={`tel:${sedeNazionale.cellLink2}`} class="text-[#0fbe7c] hover:underline">
+                      {sedeNazionale.cellDisplay2}
+                    </a>
+                  </p>
+                )
+              }
+              {
+                sedeNazionale.email && (
+                  <p>
+                    <span class="font-semibold text-gray-900">Email:</span>{' '}
+                    <a href={`mailto:${sedeNazionale.email}`} class="text-[#0fbe7c] hover:underline">
+                      {sedeNazionale.email}
+                    </a>
+                  </p>
+                )
+              }
             </div>
 
             <div class="mt-8">
@@ -128,8 +139,7 @@ const sedeNazionale = {
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                class="w-full h-full min-h-[400px]"
-              ></iframe>
+                class="w-full h-full min-h-[400px]"></iframe>
             </div>
           </div>
         </div>
@@ -137,4 +147,3 @@ const sedeNazionale = {
     </div>
   </section>
 </PageLayout>
-

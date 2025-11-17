@@ -26,17 +26,9 @@ export interface Props {
   position?: string;
 }
 
-const {
-  id = 'header',
-  links = [],
-  isSticky = false,
-  isDark = false,
-  isFullWidth = false,
-  position = 'center',
-} = Astro.props;
+const { id = 'header', links = [], isSticky = false, isDark = false, isFullWidth = false } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
-const brandGreen = '#0fbe7c';
 ---
 
 <header
@@ -61,9 +53,7 @@ const brandGreen = '#0fbe7c';
       class="items-center w-full uppercase tracking-normal font-semibold text-sm text-default hidden md:flex justify-center py-1"
       aria-label="Main navigation"
     >
-      <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-sm md:justify-center [&>li]:mx-1"
-      >
+      <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-sm md:justify-center [&>li]:mx-1">
         {
           links.map(({ text, href, links }) => (
             <li class={links?.length ? 'dropdown' : ''}>
@@ -81,9 +71,7 @@ const brandGreen = '#0fbe7c';
                         {text}
                       </a>
                     ) : (
-                      <span class="px-4 py-3 flex items-center whitespace-nowrap text-black">
-                        {text}
-                      </span>
+                      <span class="px-4 py-3 flex items-center whitespace-nowrap text-black">{text}</span>
                     )}
                     <button
                       type="button"
@@ -91,13 +79,17 @@ const brandGreen = '#0fbe7c';
                       class="hover:text-[#0fbe7c] px-2 py-3 flex items-center text-black md:px-1"
                       aria-label="Toggle submenu"
                     >
-                      <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 md:hidden transition-transform duration-200" />
-                      <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+                      <Icon
+                        name="tabler:chevron-down"
+                        class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 md:hidden transition-transform duration-200"
+                      />
+                      <Icon
+                        name="tabler:chevron-down"
+                        class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline"
+                      />
                     </button>
                   </div>
-                  <ul
-                    class="dropdown-menu md:absolute md:hidden font-medium rounded border border-[#f1f1f1] bg-white text-black md:min-w-[260px] drop-shadow-xl pl-4 md:pl-0 max-h-0 md:max-h-none overflow-hidden md:overflow-visible transition-all duration-300"
-                  >
+                  <ul class="dropdown-menu md:absolute md:hidden font-medium rounded border border-[#f1f1f1] bg-white text-black md:min-w-[260px] drop-shadow-xl pl-4 md:pl-0 max-h-0 md:max-h-none overflow-hidden md:overflow-visible transition-all duration-300">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a

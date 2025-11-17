@@ -1,8 +1,8 @@
 ---
-title: "Infortunistica, malasanità e incidenti stradali"
-slug: "infortunistica-malasanita-incidenti-stradali"
-category: "csu"
-image: ""
+title: 'Infortunistica, malasanità e incidenti stradali'
+slug: 'infortunistica-malasanita-incidenti-stradali'
+category: 'csu'
+image: ''
 ---
 
 Il Centro Servizi CSU tramite Studi Legali specializzati offre servizi in materia di infortunistica, responsabilità sanitaria e contenzioso bancario, finanziario e assicurativo.

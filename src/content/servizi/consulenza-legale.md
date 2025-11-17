@@ -1,8 +1,8 @@
 ---
-title: "Consulenza Legale"
-slug: "consulenza-legale"
-category: "servizi"
-image: ""
+title: 'Consulenza Legale'
+slug: 'consulenza-legale'
+category: 'servizi'
+image: ''
 ---
 
 Il SINDACATO ASEU e il connesso Ufficio Vertenze, stipulano, mediante scrittura privata, convenzioni con noti studi Legali specializzati in diritto del lavoro, al fine di garantire, ai propri Iscritti e ai futuri Associati, un'assistenza legale -relativa alla materia giuslavoristica- in tutta la fase del procedimento giuridico.

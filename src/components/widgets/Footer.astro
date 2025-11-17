@@ -1,5 +1,4 @@
 ---
-import { SITE } from 'astrowind:config';
 import { getPermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -22,7 +21,7 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { secondaryLinks = [], footNote = '' } = Astro.props;
 ---
 
 <footer class="bg-[#2a2a2a] text-gray-300 not-prose">
@@ -33,29 +32,19 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         <h3 class="font-bold text-[#0fbe7c] text-lg mb-4 uppercase">MAPPA DEL SITO</h3>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href={getPermalink('/')} class="hover:text-[#0fbe7c] transition">
-              Home
-            </a>
+            <a href={getPermalink('/')} class="hover:text-[#0fbe7c] transition"> Home </a>
           </li>
           <li>
-            <a href={getPermalink('/sedi')} class="hover:text-[#0fbe7c] transition">
-              Sedi
-            </a>
+            <a href={getPermalink('/sedi')} class="hover:text-[#0fbe7c] transition"> Sedi </a>
           </li>
           <li>
-            <a href={getPermalink('/chi-siamo')} class="hover:text-[#0fbe7c] transition">
-              Chi siamo
-            </a>
+            <a href={getPermalink('/chi-siamo')} class="hover:text-[#0fbe7c] transition"> Chi siamo </a>
           </li>
           <li>
-            <a href={getPermalink('/servizi')} class="hover:text-[#0fbe7c] transition">
-              Servizi
-            </a>
+            <a href={getPermalink('/servizi')} class="hover:text-[#0fbe7c] transition"> Servizi </a>
           </li>
           <li>
-            <a href={getPermalink('/caf-patronato')} class="hover:text-[#0fbe7c] transition">
-              CAF e Patronato
-            </a>
+            <a href={getPermalink('/caf-patronato')} class="hover:text-[#0fbe7c] transition"> CAF e Patronato </a>
           </li>
           <li>
             <a href={getPermalink('/centro-servizi-csu')} class="hover:text-[#0fbe7c] transition">
@@ -63,19 +52,13 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             </a>
           </li>
           <li>
-            <a href={getPermalink('/contatti')} class="hover:text-[#0fbe7c] transition">
-              Contatti
-            </a>
+            <a href={getPermalink('/contatti')} class="hover:text-[#0fbe7c] transition"> Contatti </a>
           </li>
           <li>
-            <a href={getPermalink('/sedi')} class="hover:text-[#0fbe7c] transition">
-              Dove siamo
-            </a>
+            <a href={getPermalink('/sedi')} class="hover:text-[#0fbe7c] transition"> Dove siamo </a>
           </li>
           <li>
-            <a href={getPermalink('/privacy')} class="hover:text-[#0fbe7c] transition">
-              Privacy Policy
-            </a>
+            <a href={getPermalink('/privacy')} class="hover:text-[#0fbe7c] transition"> Privacy Policy </a>
           </li>
         </ul>
       </div>
@@ -114,17 +97,27 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             </a>
           </li>
           <li>
-            <a href={getPermalink('/servizi/ricostruzione-crediti-di-lavoro-a-nero')} class="hover:text-[#0fbe7c] transition">
+            <a
+              href={getPermalink('/servizi/ricostruzione-crediti-di-lavoro-a-nero')}
+              class="hover:text-[#0fbe7c] transition"
+            >
               Ricostruzione crediti di lavoro a nero
             </a>
           </li>
           <li>
-            <a href={getPermalink('/servizi/redazioni-di-verbali-di-conciliazione')} class="hover:text-[#0fbe7c] transition">
-              Redazioni e sottoscrizioni di verbali di conciliazione ex Art.411 c.p.c. con deposito presso l'Ispettorato Territoriale del Lavoro
+            <a
+              href={getPermalink('/servizi/redazioni-di-verbali-di-conciliazione')}
+              class="hover:text-[#0fbe7c] transition"
+            >
+              Redazioni e sottoscrizioni di verbali di conciliazione ex Art.411 c.p.c. con deposito presso l'Ispettorato
+              Territoriale del Lavoro
             </a>
           </li>
           <li>
-            <a href={getPermalink('/servizi/conteggi-spettanze-di-fine-rapporto-e-tfr')} class="hover:text-[#0fbe7c] transition">
+            <a
+              href={getPermalink('/servizi/conteggi-spettanze-di-fine-rapporto-e-tfr')}
+              class="hover:text-[#0fbe7c] transition"
+            >
               Conteggi spettanze di fine rapporto e TFR
             </a>
           </li>
@@ -155,17 +148,27 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             </a>
           </li>
           <li>
-            <a href={getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali')} class="hover:text-[#0fbe7c] transition">
-              Consulenza e tutela in materia di infortunistica, malasanità e responsabilità bancaria, finanziaria e assicurativa
+            <a
+              href={getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali')}
+              class="hover:text-[#0fbe7c] transition"
+            >
+              Consulenza e tutela in materia di infortunistica, malasanità e responsabilità bancaria, finanziaria e
+              assicurativa
             </a>
           </li>
           <li>
-            <a href={getPermalink('/centro-servizi-csu/ricorsi-agenzia-entrate-riscossione')} class="hover:text-[#0fbe7c] transition">
+            <a
+              href={getPermalink('/centro-servizi-csu/ricorsi-agenzia-entrate-riscossione')}
+              class="hover:text-[#0fbe7c] transition"
+            >
               Polizze assicurative
             </a>
           </li>
           <li>
-            <a href={getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali')} class="hover:text-[#0fbe7c] transition">
+            <a
+              href={getPermalink('/centro-servizi-csu/infortunistica-malasanita-incidenti-stradali')}
+              class="hover:text-[#0fbe7c] transition"
+            >
               Consulenza e Assistenza incidenti stradali
             </a>
           </li>
@@ -191,12 +194,18 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             </a>
           </li>
           <li>
-            <a href={getPermalink('/caf-patronato/indennita-di-disoccupazione')} class="hover:text-[#0fbe7c] transition">
+            <a
+              href={getPermalink('/caf-patronato/indennita-di-disoccupazione')}
+              class="hover:text-[#0fbe7c] transition"
+            >
               Indennità di disoccupazione
             </a>
           </li>
           <li>
-            <a href={getPermalink('/caf-patronato/modello-730-unico-imu-successioni')} class="hover:text-[#0fbe7c] transition">
+            <a
+              href={getPermalink('/caf-patronato/modello-730-unico-imu-successioni')}
+              class="hover:text-[#0fbe7c] transition"
+            >
               Modello 730 – unico – imu -successioni
             </a>
           </li>
@@ -215,11 +224,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             secondaryLinks.map(({ text, href }, index) => (
               <>
                 {index !== 0 ? ' · ' : ''}
-                <a
-                  class="hover:text-[#0fbe7c] transition"
-                  href={href}
-                  set:html={text}
-                />
+                <a class="hover:text-[#0fbe7c] transition" href={href} set:html={text} />
               </>
             ))
           }

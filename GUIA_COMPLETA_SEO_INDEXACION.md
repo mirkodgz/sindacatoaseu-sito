@@ -3,6 +3,7 @@
 ## ✅ **CONFIGURACIÓN ACTUAL**
 
 ### **Ya Implementado:**
+
 - ✅ Sitemap automático (`@astrojs/sitemap`)
 - ✅ Robots.txt básico
 - ✅ Google Site Verification configurado
@@ -56,16 +57,19 @@
 ### **Configuración Actual:**
 
 Tu sitio usa `@astrojs/sitemap` que genera automáticamente:
+
 - `sitemap-index.xml` (índice principal)
 - `sitemap-0.xml`, `sitemap-1.xml`, etc. (sitemaps individuales)
 
 ### **Ubicación:**
+
 - Se genera en: `dist/sitemap-index.xml` después del build
 - URL pública: `https://www.sindacatoaseu.it/sitemap-index.xml`
 
 ### **Verificación:**
 
 Después del deploy, verifica que el sitemap sea accesible:
+
 ```bash
 curl https://www.sindacatoaseu.it/sitemap-index.xml
 ```
@@ -73,6 +77,7 @@ curl https://www.sindacatoaseu.it/sitemap-index.xml
 ### **Optimización del Sitemap:**
 
 El sitemap incluye automáticamente:
+
 - ✅ Todas las páginas estáticas
 - ✅ Todas las páginas dinámicas (servizi, caf, csu)
 - ✅ Páginas del blog (si están indexadas)
@@ -85,12 +90,14 @@ Si quieres excluir páginas (ej: blog de ejemplo), puedes hacerlo en `astro.conf
 sitemap({
   filter: (page) => {
     // Excluir páginas del blog de ejemplo
-    return !page.includes('/blog/') || 
-           page.includes('/servizi/') || 
-           page.includes('/caf-patronato/') ||
-           page.includes('/centro-servizi-csu/');
-  }
-})
+    return (
+      !page.includes('/blog/') ||
+      page.includes('/servizi/') ||
+      page.includes('/caf-patronato/') ||
+      page.includes('/centro-servizi-csu/')
+    );
+  },
+});
 ```
 
 ---
@@ -153,55 +160,55 @@ Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
 <title>SINDACATO ASEU – Associazione Sindacale Europea Universale</title>
 
 <!-- Description -->
-<meta name="description" content="Sindacato, CAF e Patronato a Milano...">
+<meta name="description" content="Sindacato, CAF e Patronato a Milano..." />
 
 <!-- Keywords -->
-<meta name="keywords" content="sindacato milano, CAF milano...">
+<meta name="keywords" content="sindacato milano, CAF milano..." />
 
 <!-- Robots -->
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow" />
 
 <!-- Canonical -->
-<link rel="canonical" href="https://www.sindacatoaseu.it/">
+<link rel="canonical" href="https://www.sindacatoaseu.it/" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="...">
-<meta property="og:description" content="...">
-<meta property="og:image" content="https://www.sindacatoaseu.it/og-image.jpg">
-<meta property="og:url" content="https://www.sindacatoaseu.it/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="SINDACATO ASEU">
+<meta property="og:title" content="..." />
+<meta property="og:description" content="..." />
+<meta property="og:image" content="https://www.sindacatoaseu.it/og-image.jpg" />
+<meta property="og:url" content="https://www.sindacatoaseu.it/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SINDACATO ASEU" />
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="...">
-<meta name="twitter:description" content="...">
-<meta name="twitter:image" content="https://www.sindacatoaseu.it/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="..." />
+<meta name="twitter:description" content="..." />
+<meta name="twitter:image" content="https://www.sindacatoaseu.it/og-image.jpg" />
 ```
 
 ### **B. Meta Tags Adicionales Recomendados:**
 
 ```html
 <!-- Idioma -->
-<meta http-equiv="content-language" content="it">
+<meta http-equiv="content-language" content="it" />
 
 <!-- Autor -->
-<meta name="author" content="SINDACATO ASEU">
+<meta name="author" content="SINDACATO ASEU" />
 
 <!-- Geo Tags (Local SEO) -->
-<meta name="geo.region" content="IT-LO">
-<meta name="geo.placename" content="Milano">
-<meta name="geo.position" content="45.5019;9.2314">
-<meta name="ICBM" content="45.5019, 9.2314">
+<meta name="geo.region" content="IT-LO" />
+<meta name="geo.placename" content="Milano" />
+<meta name="geo.position" content="45.5019;9.2314" />
+<meta name="ICBM" content="45.5019, 9.2314" />
 
 <!-- Revisit -->
-<meta name="revisit-after" content="7 days">
+<meta name="revisit-after" content="7 days" />
 
 <!-- Distribution -->
-<meta name="distribution" content="global">
+<meta name="distribution" content="global" />
 
 <!-- Rating -->
-<meta name="rating" content="general">
+<meta name="rating" content="general" />
 ```
 
 ---
@@ -295,6 +302,7 @@ Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
 ### **A. Estructura de URLs:**
 
 ✅ **Ya optimizado:**
+
 - URLs limpias y descriptivas
 - Sin parámetros innecesarios
 - HTTPS (cuando esté en producción)
@@ -311,6 +319,7 @@ Content-Language: it
 ### **C. Velocidad de Carga:**
 
 ✅ **Ya optimizado:**
+
 - Astro genera HTML estático (muy rápido)
 - Imágenes optimizadas
 - CSS/JS minificados
@@ -318,6 +327,7 @@ Content-Language: it
 ### **D. Mobile-First:**
 
 ✅ **Ya implementado:**
+
 - Diseño responsive
 - Viewport configurado
 - Touch-friendly
@@ -352,7 +362,7 @@ Configura GA4 en `config.yaml`:
 analytics:
   vendors:
     googleAnalytics:
-      id: 'G-XXXXXXXXXX'  # Tu ID de GA4
+      id: 'G-XXXXXXXXXX' # Tu ID de GA4
 ```
 
 ### **C. Herramientas de Verificación:**
@@ -504,6 +514,7 @@ cat public/robots.txt
 ### **Problema: Páginas no se indexan**
 
 **Soluciones:**
+
 1. Verificar que `robots: index: true` en config
 2. Verificar que no estén bloqueadas en robots.txt
 3. Solicitar indexación manual en Search Console
@@ -513,6 +524,7 @@ cat public/robots.txt
 ### **Problema: Errores en Search Console**
 
 **Soluciones:**
+
 1. Revisar errores específicos
 2. Corregir problemas técnicos
 3. Solicitar re-indexación después de corregir
@@ -521,6 +533,7 @@ cat public/robots.txt
 ### **Problema: Bajo CTR (Click-Through Rate)**
 
 **Soluciones:**
+
 1. Mejorar meta descriptions
 2. Optimizar títulos (H1)
 3. Usar palabras clave en títulos
@@ -625,4 +638,3 @@ Tu sitio ya tiene una **base sólida de SEO**:
 ---
 
 **¿Necesitas ayuda con algún paso específico?** Puedo ayudarte a implementar cualquier mejora adicional. 🚀
-

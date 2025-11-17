@@ -1,8 +1,8 @@
 ---
-title: "Assistenza immigrazione"
-slug: "assistenza-immigrazione"
-category: "caf"
-image: ""
+title: 'Assistenza immigrazione'
+slug: 'assistenza-immigrazione'
+category: 'caf'
+image: ''
 ---
 
 Il SINDACATO ASEU offre assistenza e consulenza, sia giudiziale che stragiudiziale, in materia di diritto dell'immigrazione, trattando a titolo esemplificativo e non esaustivo:

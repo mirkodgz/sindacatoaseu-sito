@@ -75,16 +75,16 @@ import { UI } from 'astrowind:config';
       if (window.innerWidth >= 768) {
         return;
       }
-      
+
       e.preventDefault();
       e.stopPropagation();
-      
+
       const dropdown = elem.closest('.dropdown');
       const submenu = dropdown?.querySelector('.dropdown-menu');
       const chevron = elem.querySelector('svg');
-      
+
       if (!submenu) return;
-      
+
       // Close other open submenus
       document.querySelectorAll('.dropdown').forEach((item) => {
         if (item !== dropdown) {
@@ -99,10 +99,10 @@ import { UI } from 'astrowind:config';
           }
         }
       });
-      
+
       // Toggle current submenu
       const isOpen = submenu.classList.contains('max-h-[1000px]');
-      
+
       if (isOpen) {
         submenu.classList.remove('max-h-[1000px]');
         submenu.classList.add('max-h-0');

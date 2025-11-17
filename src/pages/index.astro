@@ -5,8 +5,10 @@ import { getPermalink } from '~/utils/permalinks';
 const metadata = {
   title: 'SINDACATO ASEU – Associazione Sindacale Europea Universale',
   ignoreTitleTemplate: true,
-  description: 'Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione. Tutela lavoratori, pensioni, ricorsi e servizi CSU. Contattaci per una consulenza gratuita.',
-  keywords: 'sindacato milano, CAF milano, patronato milano, assistenza fiscale milano, consulenza legale lavoro milano, pensione milano, immigrazione milano, TFR milano, buste paga milano, sindacato ASEU, assistenza previdenziale milano',
+  description:
+    'Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione. Tutela lavoratori, pensioni, ricorsi e servizi CSU. Contattaci per una consulenza gratuita.',
+  keywords:
+    'sindacato milano, CAF milano, patronato milano, assistenza fiscale milano, consulenza legale lavoro milano, pensione milano, immigrazione milano, TFR milano, buste paga milano, sindacato ASEU, assistenza previdenziale milano',
 };
 ---
 
@@ -14,22 +16,13 @@ const metadata = {
   <!-- Hero Full-Width ******************* -->
   <section class="relative w-full h-[75vh] md:h-[55vh] -mt-[76px] not-prose">
     <div class="absolute inset-0">
-      <img
-        src="/hero-image-homepage.webp"
-        alt="SINDACATO ASEU"
-        class="w-full h-full object-cover"
-        loading="eager"
-      />
+      <img src="/hero-image-homepage.webp" alt="SINDACATO ASEU" class="w-full h-full object-cover" loading="eager" />
       <div class="absolute inset-0 bg-black/30"></div>
     </div>
     <div class="relative h-full flex items-center justify-center">
       <div class="text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 font-heading">
-          SINDACATO ASEU
-        </h1>
-        <p class="text-xl md:text-2xl mb-8">
-      Associazione Sindacale Europea Universale – CAF e Patronato
-        </p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 font-heading">SINDACATO ASEU</h1>
+        <p class="text-xl md:text-2xl mb-8">Associazione Sindacale Europea Universale – CAF e Patronato</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={getPermalink('/servizi')}
@@ -56,7 +49,9 @@ const metadata = {
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Servizio 1: Servizi -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:border-[#0fbe7c] hover:shadow-lg transition-all flex flex-col">
+        <div
+          class="bg-white rounded-lg border border-gray-200 p-6 hover:border-[#0fbe7c] hover:shadow-lg transition-all flex flex-col"
+        >
           <div class="mb-4 flex justify-center">
             <img
               src="/personhome.png"
@@ -66,11 +61,11 @@ const metadata = {
             />
             <div style="display: none;" class="text-[#0fbe7c] text-6xl">👤</div>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
-            Servizi
-          </h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Servizi</h3>
           <p class="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
-            I servizi offerti sono i seguenti: Ufficio vertenze; controversie di lavoro; pratiche disciplinari; recuperi crediti di lavoro; controllo buste paga; ricostruzione crediti di lavoro a nero; redazioni e sottoscrizioni di verbali di conciliazione ex Art.411 c.p.c. con deposito presso l'Ispettorato Territoriale del Lavoro.
+            I servizi offerti sono i seguenti: Ufficio vertenze; controversie di lavoro; pratiche disciplinari; recuperi
+            crediti di lavoro; controllo buste paga; ricostruzione crediti di lavoro a nero; redazioni e sottoscrizioni
+            di verbali di conciliazione ex Art.411 c.p.c. con deposito presso l'Ispettorato Territoriale del Lavoro.
           </p>
           <a
             href={getPermalink('/servizi')}
@@ -81,7 +76,9 @@ const metadata = {
         </div>
 
         <!-- Servizio 2: CAF e Patronato -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:border-[#0fbe7c] hover:shadow-lg transition-all flex flex-col">
+        <div
+          class="bg-white rounded-lg border border-gray-200 p-6 hover:border-[#0fbe7c] hover:shadow-lg transition-all flex flex-col"
+        >
           <div class="mb-4 flex justify-center">
             <img
               src="/bankhome.png"
@@ -91,11 +88,11 @@ const metadata = {
             />
             <div style="display: none;" class="text-[#0fbe7c] text-6xl">🏛️</div>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
-            Caf e Patronato
-          </h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Caf e Patronato</h3>
           <p class="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
-            Inoltre, offre i seguenti servizi di Caf e Patronato: Modello 730; Unico; Imu; Successioni; domande di pensione: vecchiaia; reversibilità; anzianità; invalidità civile; accompagnamento; indennità di disoccupazione.
+            Inoltre, offre i seguenti servizi di Caf e Patronato: Modello 730; Unico; Imu; Successioni; domande di
+            pensione: vecchiaia; reversibilità; anzianità; invalidità civile; accompagnamento; indennità di
+            disoccupazione.
           </p>
           <a
             href={getPermalink('/caf-patronato')}
@@ -106,7 +103,9 @@ const metadata = {
         </div>
 
         <!-- Servizio 3: Centro Servizi CSU -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 hover:border-[#0fbe7c] hover:shadow-lg transition-all flex flex-col">
+        <div
+          class="bg-white rounded-lg border border-gray-200 p-6 hover:border-[#0fbe7c] hover:shadow-lg transition-all flex flex-col"
+        >
           <div class="mb-4 flex justify-center">
             <img
               src="/handshome.png"
@@ -116,11 +115,10 @@ const metadata = {
             />
             <div style="display: none;" class="text-[#0fbe7c] text-6xl">🤝</div>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
-            Centro Servizi Universale – CSU
-          </h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Centro Servizi Universale – CSU</h3>
           <p class="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
-            Dispone di un centro servizi che offre i seguenti servizi: consulenza e assistenza incidenti stradali; ricorsi contro Agenzia Entrate Riscossione; Visure camerali; apertura partite IVA.
+            Dispone di un centro servizi che offre i seguenti servizi: consulenza e assistenza incidenti stradali;
+            ricorsi contro Agenzia Entrate Riscossione; Visure camerali; apertura partite IVA.
           </p>
           <a
             href={getPermalink('/centro-servizi-csu')}

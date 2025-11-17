@@ -3,8 +3,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Sedi — SINDACATO ASEU',
-  description:
-    'Trova la sede SINDACATO ASEU più vicina a te per assistenza sindacale, CAF e patronato.',
+  description: 'Trova la sede SINDACATO ASEU più vicina a te per assistenza sindacale, CAF e patronato.',
 };
 
 const sedi = [
@@ -152,12 +151,7 @@ const sedi = [
           Seleziona una delle sedi per avere più informazioni.
         </p>
         <div class="flex justify-center mb-8">
-          <img
-            src="/GiftClick.gif"
-            alt="Clicca per aprire i dettagli"
-            class="h-16 w-auto"
-            loading="lazy"
-          />
+          <img src="/GiftClick.gif" alt="Clicca per aprire i dettagli" class="h-16 w-auto" loading="lazy" />
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -192,12 +186,7 @@ const sedi = [
               <p class="text-sm uppercase tracking-[0.2em] text-gray-500">{sede.zone}</p>
               <h3 class="text-2xl font-bold text-gray-900 mt-2">{sede.title}</h3>
             </div>
-            <button
-              type="button"
-              class="text-gray-400 hover:text-gray-600"
-              data-modal-close
-              aria-label="Chiudi"
-            >
+            <button type="button" class="text-gray-400 hover:text-gray-600" data-modal-close aria-label="Chiudi">
               ✕
             </button>
           </div>
@@ -211,15 +200,13 @@ const sedi = [
             {sede.phoneDisplay && (
               <p>
                 <span class="font-semibold text-gray-900">Telefono:</span>{' '}
-                {
-                  sede.phoneLink ? (
-                    <a href={`tel:${sede.phoneLink}`} class="text-[#0fbe7c] hover:underline">
-                      {sede.phoneDisplay}
-                    </a>
-                  ) : (
-                    sede.phoneDisplay
-                  )
-                }
+                {sede.phoneLink ? (
+                  <a href={`tel:${sede.phoneLink}`} class="text-[#0fbe7c] hover:underline">
+                    {sede.phoneDisplay}
+                  </a>
+                ) : (
+                  sede.phoneDisplay
+                )}
               </p>
             )}
             {sede.email && (
@@ -235,12 +222,7 @@ const sedi = [
             </p>
             <p>
               <span class="font-semibold text-gray-900">Google Maps:</span>{' '}
-              <a
-                href={sede.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-[#0fbe7c] hover:underline"
-              >
+              <a href={sede.mapsUrl} target="_blank" rel="noopener noreferrer" class="text-[#0fbe7c] hover:underline">
                 Apri mappa
               </a>
             </p>
@@ -255,7 +237,7 @@ const sedi = [
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen
                 class="w-full h-64 md:h-72"
-              ></iframe>
+              />
             </div>
           </div>
 
@@ -295,8 +277,10 @@ const sedi = [
       openButtons.forEach((button) => {
         button.addEventListener('click', () => {
           const targetId = button.getAttribute('data-modal-target');
-          const dialog = document.getElementById(targetId);
-          dialog?.showModal();
+          if (targetId) {
+            const dialog = document.getElementById(targetId) as HTMLDialogElement | null;
+            dialog?.showModal();
+          }
         });
       });
 
@@ -317,4 +301,3 @@ const sedi = [
     }
   </script>
 </PageLayout>
-

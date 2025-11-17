@@ -1,8 +1,8 @@
 ---
-title: "Gestioni colf e badanti"
-slug: "gestioni-colf-e-badanti"
-category: "servizi"
-image: ""
+title: 'Gestioni colf e badanti'
+slug: 'gestioni-colf-e-badanti'
+category: 'servizi'
+image: ''
 ---
 
 Tramite questo servizio tutti i cittadini, mediante un contributo di assistenza sindacale, stabilito in cifra fissa annuale, potranno farsi assistere nella gestione dei propri Lavoratori domestici (Colf/Badanti).

@@ -36,20 +36,21 @@ const metadata = {
 
     <h1 class="mt-6 text-3xl font-bold uppercase text-gray-900">{cafService.data.title}</h1>
 
-    {cafService.data.image && (
-      <div class="mt-8">
-        <img
-          src={cafService.data.image}
-          alt={cafService.data.title}
-          class="w-full rounded-xl border border-gray-200 object-cover"
-          loading="lazy"
-        />
-      </div>
-    )}
+    {
+      cafService.data.image && (
+        <div class="mt-8">
+          <img
+            src={cafService.data.image}
+            alt={cafService.data.title}
+            class="w-full rounded-xl border border-gray-200 object-cover"
+            loading="lazy"
+          />
+        </div>
+      )
+    }
 
     <article class="prose max-w-none mt-10">
       <Content />
     </article>
   </section>
 </PageLayout>
-
