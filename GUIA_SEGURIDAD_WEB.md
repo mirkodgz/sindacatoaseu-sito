@@ -1,4 +1,4 @@
-# 🔒 Guía Completa de Seguridad Web - SINDACATO A.S.E.U.
+# 🔒 Guía Completa de Seguridad Web - SINDACATO ASEU
 
 ## ✅ **MEDIDAS DE SEGURIDAD IMPLEMENTADAS**
 

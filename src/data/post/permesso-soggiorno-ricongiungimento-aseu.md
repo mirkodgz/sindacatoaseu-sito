@@ -13,7 +13,7 @@ metadata:
   canonical: https://www.sindacatoaseu.it/blog/permesso-soggiorno-ricongiungimento-aseu
 ---
 
-Il supporto alle persone migranti è una delle attività storiche del SINDACATO A.S.E.U. Ogni ufficio territoriale dispone di operatori formati sulle piattaforme ministeriali e sulle normative più recenti. Ecco le indicazioni principali per muoverti con sicurezza.
+Il supporto alle persone migranti è una delle attività storiche del SINDACATO ASEU Ogni ufficio territoriale dispone di operatori formati sulle piattaforme ministeriali e sulle normative più recenti. Ecco le indicazioni principali per muoverti con sicurezza.
 
 ## Rinnovo del permesso
 

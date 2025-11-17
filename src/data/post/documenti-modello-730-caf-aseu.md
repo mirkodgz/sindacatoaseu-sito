@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-07-02T00:00:00Z
 author: CAF ASEU Milano
-title: "Modello 730: checklist documenti per il CAF A.S.E.U."
+title: "Modello 730: checklist documenti per il CAF ASEU"
 excerpt: "Una guida pratica per arrivare al CAF ASEU con tutti i documenti necessari e ottenere il rimborso in tempi rapidi."
 image: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2070&q=80
 category: CAF e Patronato

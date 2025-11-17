@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-09-18T00:00:00Z
 author: Redazione ASEU
-title: "Come preparare una vertenza di lavoro con il SINDACATO A.S.E.U."
+title: "Come preparare una vertenza di lavoro con il SINDACATO ASEU"
 excerpt: "Tutti i passaggi per raccogliere prove, calcolare le spettanze e avviare una vertenza con l'Ufficio Vertenze ASEU."
 image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2070&q=80
 category: Tutela del lavoro
@@ -13,7 +13,7 @@ metadata:
   canonical: https://www.sindacatoaseu.it/blog/come-preparare-vertenza-lavoro-aseu
 ---
 
-Aprire una vertenza non è solo inviare una diffida al datore di lavoro: significa dimostrare con ordine ogni aspetto del rapporto lavorativo. Nel SINDACATO A.S.E.U. partiamo sempre dall'ascolto e dalla raccolta documentale, così da costruire una linea difensiva coerente con il contratto applicato e con la reale dinamica dei fatti.
+Aprire una vertenza non è solo inviare una diffida al datore di lavoro: significa dimostrare con ordine ogni aspetto del rapporto lavorativo. Nel SINDACATO ASEU partiamo sempre dall'ascolto e dalla raccolta documentale, così da costruire una linea difensiva coerente con il contratto applicato e con la reale dinamica dei fatti.
 
 ## Documenti indispensabili
 

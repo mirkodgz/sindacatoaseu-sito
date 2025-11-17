@@ -21,8 +21,8 @@
 ## 🎨 **DISEÑO RECOMENDADO**
 
 ### **Elementos que debe incluir:**
-1. **Logo de SINDACATO A.S.E.U.** (centrado o a la izquierda)
-2. **Texto principal:** "SINDACATO A.S.E.U."
+1. **Logo de SINDACATO ASEU** (centrado o a la izquierda)
+2. **Texto principal:** "SINDACATO ASEU"
 3. **Subtítulo:** "Associazione Sindacale Europea Universale"
 4. **Tagline:** "CAF e Patronato - Milano"
 5. **Color de fondo:** Verde ASEU (#0fbe7c) o blanco/gris claro
@@ -34,7 +34,7 @@
 │                                     │
 │         [LOGO ASEU]                 │
 │                                     │
-│    SINDACATO A.S.E.U.               │
+│    SINDACATO ASEU               │
 │                                     │
 │  Associazione Sindacale Europea     │
 │         Universale                   │
@@ -79,7 +79,7 @@ Ya está configurado en `src/config.yaml`:
 
 ```yaml
 openGraph:
-  site_name: SINDACATO A.S.E.U.
+  site_name: SINDACATO ASEU
   images:
     - url: '/og-image.png'
       width: 1200
@@ -159,7 +159,7 @@ Si quieres imágenes diferentes por página, puedes agregar en cada página:
 ```astro
 ---
 const metadata = {
-  title: 'Servizi — SINDACATO A.S.E.U.',
+  title: 'Servizi — SINDACATO ASEU',
   openGraph: {
     images: [
       {

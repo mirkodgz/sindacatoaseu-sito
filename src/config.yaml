@@ -1,5 +1,5 @@
 site:
-  name: SINDACATO A.S.E.U.
+  name: SINDACATO ASEU
   site: 'https://www.sindacatoaseu.it'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: SINDACATO A.S.E.U. – Associazione Sindacale Europea Universale
-    template: '%s — SINDACATO A.S.E.U.'
+    default: SINDACATO ASEU – Associazione Sindacale Europea Universale
+    template: '%s — SINDACATO ASEU'
   description: 'Sindacato, CAF e Patronato a Milano. Assistenza fiscale, legale, previdenziale e immigrazione. Tutela lavoratori, pensioni, ricorsi e servizi CSU.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: SINDACATO A.S.E.U.
+    site_name: SINDACATO ASEU
     images:
       - url: '/og-image.jpg'
         width: 1200

@@ -92,7 +92,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'SINDACATO A.S.E.U.',
+      title: 'SINDACATO ASEU',
       links: [
         { text: 'Home', href: getPermalink('/') },
         { text: 'Chi siamo', href: getPermalink('/chi-siamo') },

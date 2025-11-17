@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-06-14T00:00:00Z
 author: Sportello Colf e Badanti ASEU
-title: "Colf e badanti: come regolarizzare il rapporto di lavoro con A.S.E.U."
+title: "Colf e badanti: come regolarizzare il rapporto di lavoro con ASEU"
 excerpt: "Dal contratto di assunzione alla busta paga mensile: tutte le indicazioni per gestire correttamente lavoratori domestici con il supporto ASEU."
 image: https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=2070&q=80
 category: Guide pratiche

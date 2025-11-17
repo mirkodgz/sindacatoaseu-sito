@@ -1,4 +1,4 @@
-# 🚀 Recomendaciones Profesionales para SINDACATO A.S.E.U.
+# 🚀 Recomendaciones Profesionales para SINDACATO ASEU
 
 ## ✅ **IMPLEMENTADO**
 
@@ -56,7 +56,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "SINDACATO A.S.E.U.",
+  "name": "SINDACATO ASEU",
   "url": "https://www.sindacatoaseu.it",
   "logo": "https://www.sindacatoaseu.it/ASEU-logo-definitivo.png",
   "contactPoint": {
@@ -139,8 +139,8 @@
 #### **Ejemplos de H1 Optimizados:**
 
 **Homepage:**
-- ✅ Actual: "SINDACATO A.S.E.U."
-- 💡 Sugerencia: "SINDACATO A.S.E.U. - CAF e Patronato Milano"
+- ✅ Actual: "SINDACATO ASEU"
+- 💡 Sugerencia: "SINDACATO ASEU - CAF e Patronato Milano"
 
 **Servizi:**
 - ✅ Actual: "Servizi"

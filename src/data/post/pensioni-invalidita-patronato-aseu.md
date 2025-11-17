@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-10-01T00:00:00Z
 author: Patronato ASEU
-title: "Pensioni e invalidità: come il Patronato A.S.E.U. ti accompagna passo dopo passo"
+title: "Pensioni e invalidità: come il Patronato ASEU ti accompagna passo dopo passo"
 excerpt: "Dalla verifica dei requisiti alla compilazione delle domande online: il metodo ASEU per pensioni, invalidità civile e accompagnamento."
 image: https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=2070&q=80
 category: CAF e Patronato

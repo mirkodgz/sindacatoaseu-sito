@@ -1,4 +1,4 @@
-# 🔍 Guía Completa SEO e Indexación - SINDACATO A.S.E.U.
+# 🔍 Guía Completa SEO e Indexación - SINDACATO ASEU
 
 ## ✅ **CONFIGURACIÓN ACTUAL**
 
@@ -150,7 +150,7 @@ Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
 
 ```html
 <!-- Title -->
-<title>SINDACATO A.S.E.U. – Associazione Sindacale Europea Universale</title>
+<title>SINDACATO ASEU – Associazione Sindacale Europea Universale</title>
 
 <!-- Description -->
 <meta name="description" content="Sindacato, CAF e Patronato a Milano...">
@@ -170,7 +170,7 @@ Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
 <meta property="og:image" content="https://www.sindacatoaseu.it/og-image.jpg">
 <meta property="og:url" content="https://www.sindacatoaseu.it/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="SINDACATO A.S.E.U.">
+<meta property="og:site_name" content="SINDACATO ASEU">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -186,7 +186,7 @@ Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
 <meta http-equiv="content-language" content="it">
 
 <!-- Autor -->
-<meta name="author" content="SINDACATO A.S.E.U.">
+<meta name="author" content="SINDACATO ASEU">
 
 <!-- Geo Tags (Local SEO) -->
 <meta name="geo.region" content="IT-LO">
@@ -224,7 +224,7 @@ Sitemap: https://www.sindacatoaseu.it/sitemap-index.xml
   "serviceType": "Consulenza Legale",
   "provider": {
     "@type": "Organization",
-    "name": "SINDACATO A.S.E.U.",
+    "name": "SINDACATO ASEU",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Mario Pieri, 2",

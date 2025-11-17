@@ -1,4 +1,4 @@
-# 🔍 SEO y Palabras Clave - SINDACATO A.S.E.U.
+# 🔍 SEO y Palabras Clave - SINDACATO ASEU
 
 ## ✅ **CONFIGURACIÓN COMPLETADA**
 
@@ -125,8 +125,8 @@ sede sindacato monza, sede sindacato novara
 ### **Ejemplos Optimizados:**
 
 **Homepage:**
-- ✅ Actual: "SINDACATO A.S.E.U."
-- 💡 Optimizado: "SINDACATO A.S.E.U. - CAF e Patronato Milano"
+- ✅ Actual: "SINDACATO ASEU"
+- 💡 Optimizado: "SINDACATO ASEU - CAF e Patronato Milano"
 
 **Servizi:**
 - ✅ Actual: "Servizi"
