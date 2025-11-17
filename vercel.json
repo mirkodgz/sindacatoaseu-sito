@@ -1,6 +1,28 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/2025/:path*",
+      "destination": "/404"
+    },
+    {
+      "source": "/casino/:path*",
+      "destination": "/404"
+    },
+    {
+      "source": "/vincite-casino/:path*",
+      "destination": "/404"
+    },
+    {
+      "source": "/roulette/:path*",
+      "destination": "/404"
+    },
+    {
+      "source": "/blackjack/:path*",
+      "destination": "/404"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
