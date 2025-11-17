@@ -15,12 +15,14 @@ const sedeNazionale = {
   phoneLink: '022592773',
   cellDisplay: '349.6250509',
   cellLink: '3496250509',
+  cellDisplay2: '349.6868295',
+  cellLink2: '3496868295',
   email: 'info@sindacatoaseu.it',
   address: 'Via Mario Pieri, 2, 20127 Milano (MI) - Italia',
   summary: 'Via Mario Pieri, 2 — Milano (MI)',
   mapsUrl: 'https://maps.app.goo.gl/YaBgihcohPUFvqLH6',
   icon: '📍',
-  info: 'La sede si trova a 200 metri dalle fermata M2 di Crescenzago direzione Cologno Nord.',
+  info: 'La sede si trova a 900 metri dalle fermata M2 di Crescenzago direzione Cologno Nord.',
 };
 ---
 
@@ -82,6 +84,14 @@ const sedeNazionale = {
                   <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
                   <a href={`tel:${sedeNazionale.cellLink}`} class="text-[#0fbe7c] hover:underline">
                     {sedeNazionale.cellDisplay}
+                  </a>
+                </p>
+              )}
+              {sedeNazionale.cellDisplay2 && (
+                <p>
+                  <span class="font-semibold text-gray-900">Cellulare:</span>{' '}
+                  <a href={`tel:${sedeNazionale.cellLink2}`} class="text-[#0fbe7c] hover:underline">
+                    {sedeNazionale.cellDisplay2}
                   </a>
                 </p>
               )}
