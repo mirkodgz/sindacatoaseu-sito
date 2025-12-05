@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Contatti — SINDACATO ASEU',
@@ -127,6 +128,20 @@ const metadata = {
             <span class="text-gray-700 text-red-600">Chiuso</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Iscriviti Button Section ******************* -->
+  <section class="bg-[#fbfbfb] py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center">
+        <a
+          href={getPermalink('/iscriviti')}
+          class="inline-flex items-center justify-center px-8 py-4 bg-[#0fbe7c] text-white font-semibold rounded-full hover:bg-[#0ca868] transition text-lg"
+        >
+          ISCRIVITI
+        </a>
       </div>
     </div>
   </section>

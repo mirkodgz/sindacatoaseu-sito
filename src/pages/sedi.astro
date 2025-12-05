@@ -1,5 +1,6 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'Sedi — SINDACATO ASEU',
@@ -19,6 +20,10 @@ const sedi = [
     summary: 'Via Mario Pieri, 2 — Milano (MI)',
     mapsUrl: 'https://maps.app.goo.gl/YaBgihcohPUFvqLH6',
     icon: '📍',
+    lat: 45.5019,
+    lng: 9.2314,
+    city: 'Milano',
+    province: 'MI',
   },
   {
     id: 'modal-segreteria-provinciale',
@@ -32,6 +37,10 @@ const sedi = [
     summary: "Via Bergamo, 4 — Cassina de' Pecchi (MI)",
     mapsUrl: 'https://maps.app.goo.gl/gEJ91SMrBftH4vXM8',
     icon: '📍',
+    lat: 45.5200,
+    lng: 9.3600,
+    city: "Cassina de' Pecchi",
+    province: 'MI',
   },
   {
     id: 'modal-segreteria-piemonte',
@@ -45,6 +54,10 @@ const sedi = [
     summary: 'Via Monte Grappa, 8/D — Novara (NO)',
     mapsUrl: 'https://maps.app.goo.gl/Bsj5GqgyAZuCDaAb9',
     icon: '📍',
+    lat: 45.4469,
+    lng: 8.6222,
+    city: 'Novara',
+    province: 'NO',
   },
   {
     id: 'modal-sede-cinisello',
@@ -58,6 +71,10 @@ const sedi = [
     summary: 'Via Carmelita de Ponti, 22 — Cinisello Balsamo (MI)',
     mapsUrl: 'https://www.google.com/maps?q=Via+Carmelita+de+Ponti,+22,+20092+Cinisello+Balsamo+(MI),+Italia',
     icon: '📍',
+    lat: 45.5500,
+    lng: 9.2200,
+    city: 'Cinisello Balsamo',
+    province: 'MI',
   },
   {
     id: 'modal-sede-monza-1',
@@ -71,6 +88,10 @@ const sedi = [
     summary: 'Via San Rocco, 28 — Monza (MB)',
     mapsUrl: 'https://maps.app.goo.gl/qHPG9TZvhrtRDffG8',
     icon: '📍',
+    lat: 45.5845,
+    lng: 9.2744,
+    city: 'Monza',
+    province: 'MB',
   },
   {
     id: 'modal-sede-monza-2',
@@ -84,6 +105,10 @@ const sedi = [
     summary: 'Via Quarnaro, 1 — Monza (MB)',
     mapsUrl: 'https://maps.app.goo.gl/75Hnz6rDq9jZhz8v5',
     icon: '📍',
+    lat: 45.5845,
+    lng: 9.2744,
+    city: 'Monza',
+    province: 'MB',
   },
   {
     id: 'modal-sede-erba',
@@ -97,6 +122,10 @@ const sedi = [
     summary: 'Corso XXV Aprile, 74/F — Erba (CO)',
     mapsUrl: 'https://www.google.com/maps?q=Corso+XXV+Aprile,+74/F,+22036+Erba+(CO),+Italia',
     icon: '📍',
+    lat: 45.7900,
+    lng: 9.2300,
+    city: 'Erba',
+    province: 'CO',
   },
   {
     id: 'modal-sede-messina',
@@ -110,6 +139,10 @@ const sedi = [
     summary: 'Via Nazionale Olivarella, 31/32 — San Filippo del Mela (ME)',
     mapsUrl: 'https://maps.app.goo.gl/Gr73bJPFgGhgzETJ9',
     icon: '📍',
+    lat: 38.1700,
+    lng: 15.2700,
+    city: 'San Filippo del Mela',
+    province: 'ME',
   },
   {
     id: 'modal-sede-milano-binda',
@@ -123,6 +156,10 @@ const sedi = [
     summary: 'Via Binda, 33 — Milano (MI)',
     mapsUrl: 'https://maps.app.goo.gl/Gr73bJPFgGhgzETJ9',
     icon: '📍',
+    lat: 45.4500,
+    lng: 9.2000,
+    city: 'Milano',
+    province: 'MI',
   },
 ];
 ---
@@ -139,40 +176,80 @@ const sedi = [
     </div>
   </section>
 
-  <section class="bg-white py-16 md:py-20">
+  <!-- Search Section ******************* -->
+  <section class="bg-[#fbfbfb] py-16 md:py-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
         <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-4">Sedi</p>
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Rete territoriale SINDACATO ASEU</h1>
-        <p class="text-base text-gray-700 max-w-3xl mx-auto mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Cerca una sede</h2>
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Rete territoriale SINDACATO ASEU</h3>
+        <p class="text-base text-gray-700 max-w-3xl mx-auto mb-6">
           Assistenza sindacale, CAF e patronato in tutta Italia. Trova la sede più vicina a te.
         </p>
-        <p class="text-base text-gray-600 max-w-2xl mx-auto mb-6">
-          Seleziona una delle sedi per avere più informazioni.
-        </p>
-        <div class="flex justify-center mb-8">
-          <img src="/GiftClick.gif" alt="Clicca per aprire i dettagli" class="h-16 w-auto" loading="lazy" />
+        <div class="flex justify-center mb-6 hidden md:flex">
+          <img src="/GiftClick.gif" alt="Clicca per aprire i dettagli" class="h-12 w-auto" loading="lazy" />
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Search Bar -->
+      <div class="max-w-2xl mx-auto mb-8">
+        <div class="relative">
+          <input
+            type="text"
+            id="search-sedi"
+            placeholder="Cerca per città, provincia o indirizzo (es: Milano, MI, Via Mario Pieri...)"
+            class="w-full px-6 py-4 pr-12 rounded-full border-2 border-gray-300 focus:border-[#0fbe7c] focus:outline-none text-base"
+          />
+          <Icon name="tabler:search" class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" />
+        </div>
+        <p class="text-sm text-gray-500 mt-2 text-center" id="results-count">
+          {String(sedi.length)} sedi disponibili
+        </p>
+      </div>
+
+      <!-- Map and Sedi List Side by Side -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <!-- Interactive Map (Left on desktop, Top on mobile) -->
+        <div class="order-1 lg:order-1">
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-lg h-full">
+            <div id="map" class="w-full h-[400px] lg:h-[600px] bg-gray-100" style="min-height: 400px;">
+              <div class="flex items-center justify-center h-full text-gray-500">
+                <p>Caricamento mappa...</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-2 text-center">
+            Mappa interattiva - Clicca sui marcatori per vedere i dettagli
+          </p>
+        </div>
+
+        <!-- Sedi Cards List (Right on desktop, Bottom on mobile) -->
+        <div class="order-2 lg:order-2">
+          <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-lg h-full lg:overflow-y-auto lg:max-h-[600px]">
+            <div class="space-y-4" id="sedi-grid">
         {
           sedi.map((sede) => (
-            <article class="border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col gap-4 bg-white">
-              <div class="text-4xl">{sede.icon}</div>
-              <div>
-                <h3 class="text-xl font-semibold text-gray-900">{sede.title}</h3>
-                <p class="text-base text-gray-500">{sede.summary}</p>
-              </div>
-              <button
-                type="button"
-                data-modal-target={sede.id}
-                class="mt-auto inline-flex items-center justify-center px-4 py-2 rounded-full border border-[#0fbe7c] text-[#0fbe7c] font-semibold hover:bg-[#0fbe7c] hover:text-white transition"
-              >
-                Dettagli sede
-              </button>
-            </article>
+              <article class="sede-card border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md hover:border-[#0fbe7c] transition flex flex-col gap-3 bg-white cursor-pointer" data-sede-title={sede.title.toLowerCase()} data-sede-city={sede.city?.toLowerCase() || ''} data-sede-province={sede.province?.toLowerCase() || ''} data-sede-address={sede.address.toLowerCase()} data-modal-target={sede.id}>
+                <div class="flex items-start gap-3">
+                  <div class="text-2xl flex-shrink-0">{sede.icon}</div>
+                  <div class="flex-grow min-w-0">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-1">{sede.title}</h3>
+                    <p class="text-sm text-gray-500">{sede.summary}</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  data-modal-target={sede.id}
+                  class="mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full border border-[#0fbe7c] text-[#0fbe7c] font-semibold hover:bg-[#0fbe7c] hover:text-white transition text-sm"
+                >
+                  Dettagli sede
+                </button>
+              </article>
           ))
         }
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -194,7 +271,7 @@ const sedi = [
           <div class="mt-6 space-y-4 text-gray-700 text-base">
             {sede.ref && (
               <p>
-                <span class="font-semibold text-gray-900">Referente:</span> {sede.ref}
+                <span class="font-semibold text-gray-900">Referenti:</span> {sede.ref}
               </p>
             )}
             {sede.phoneDisplay && (
@@ -230,15 +307,30 @@ const sedi = [
 
           <div class="mt-8">
             <div class="text-sm font-semibold text-gray-700 mb-3">Anteprima mappa</div>
-            <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-inner">
+            <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-inner bg-gray-100">
               <iframe
-                src={`https://www.google.com/maps?q=${encodeURIComponent(sede.address)}&output=embed`}
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(sede.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen
                 class="w-full h-64 md:h-72"
+                title={`Mappa di ${sede.address}`}
               />
             </div>
+            <p class="text-xs text-gray-500 mt-2 text-center">
+              Se la mappa non si carica,{' '}
+              <a
+                href={sede.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-[#0fbe7c] hover:underline"
+              >
+                clicca qui per aprire Google Maps
+              </a>
+            </p>
           </div>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
@@ -269,7 +361,22 @@ const sedi = [
     }
   </style>
 
-  <script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <script is:inline>
+    const sediData = [
+      { id: 'modal-sede-nazionale', title: 'Sede Nazionale', lat: 45.5019, lng: 9.2314, address: 'Via Mario Pieri, 2, 20127 Milano (MI) - Italia', summary: 'Via Mario Pieri, 2 — Milano (MI)' },
+      { id: 'modal-segreteria-provinciale', title: 'Segreteria Provinciale di Milano', lat: 45.5200, lng: 9.3600, address: "Via Bergamo, 4, Cassina de' Pecchi (MI) - 20060 Italia", summary: "Via Bergamo, 4 — Cassina de' Pecchi (MI)" },
+      { id: 'modal-segreteria-piemonte', title: 'Segreteria Regionale Piemonte', lat: 45.4469, lng: 8.6222, address: 'Via Monte Grappa, 8/D, Novara (NO) - 28100 Italia', summary: 'Via Monte Grappa, 8/D — Novara (NO)' },
+      { id: 'modal-sede-cinisello', title: 'Sede', lat: 45.5500, lng: 9.2200, address: 'Via Carmelita de Ponti, 22, Cinisello Balsamo (MI) - 20092 Italia', summary: 'Via Carmelita de Ponti, 22 — Cinisello Balsamo (MI)' },
+      { id: 'modal-sede-monza-1', title: 'Sede', lat: 45.5845, lng: 9.2744, address: 'Via San Rocco, 28, Monza (MB) - 20900 Italia', summary: 'Via San Rocco, 28 — Monza (MB)' },
+      { id: 'modal-sede-monza-2', title: 'Sede', lat: 45.5845, lng: 9.2744, address: 'Via Quarnaro, 1, Monza (MB) - 20900 Italia', summary: 'Via Quarnaro, 1 — Monza (MB)' },
+      { id: 'modal-sede-erba', title: 'Sede', lat: 45.7900, lng: 9.2300, address: 'Corso XXV Aprile, 74/F, Erba (CO) - 22036 Italia', summary: 'Corso XXV Aprile, 74/F — Erba (CO)' },
+      { id: 'modal-sede-messina', title: 'Sede', lat: 38.1700, lng: 15.2700, address: 'Via Nazionale Olivarella, 31/32, San Filippo del Mela (ME) - 98044 Italia', summary: 'Via Nazionale Olivarella, 31/32 — San Filippo del Mela (ME)' },
+      { id: 'modal-sede-milano-binda', title: 'Sede', lat: 45.4500, lng: 9.2000, address: 'Via Binda, 33, Milano (MI) - 20143 Italia', summary: 'Via Binda, 33 — Milano (MI)' },
+    ];
+
     const initSediModals = () => {
       const openButtons = document.querySelectorAll('[data-modal-target]');
       const closeButtons = document.querySelectorAll('[data-modal-close]');
@@ -278,8 +385,10 @@ const sedi = [
         button.addEventListener('click', () => {
           const targetId = button.getAttribute('data-modal-target');
           if (targetId) {
-            const dialog = document.getElementById(targetId) as HTMLDialogElement | null;
-            dialog?.showModal();
+            const dialog = document.getElementById(targetId);
+            if (dialog && typeof dialog.showModal === 'function') {
+              dialog.showModal();
+            }
           }
         });
       });
@@ -287,17 +396,147 @@ const sedi = [
       closeButtons.forEach((button) => {
         button.addEventListener('click', () => {
           const dialog = button.closest('dialog');
-          dialog?.close();
+          if (dialog && typeof dialog.close === 'function') {
+            dialog.close();
+          }
         });
       });
     };
 
-    if (typeof document !== 'undefined') {
-      if (document.readyState !== 'loading') {
-        initSediModals();
-      } else {
-        document.addEventListener('DOMContentLoaded', initSediModals);
+    const initMap = () => {
+      if (typeof window === 'undefined' || !window.L) {
+        console.log('Leaflet no está cargado aún');
+        return;
       }
+
+      const L = window.L;
+      const mapElement = document.getElementById('map');
+      if (!mapElement) {
+        console.error('Elemento mappa non trovato');
+        return;
+      }
+
+      // Limpiar el contenido de carga
+      mapElement.innerHTML = '';
+
+      const map = L.map('map').setView([45.4642, 9.1900], 6);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19,
+      }).addTo(map);
+
+      const markers = [];
+
+      sediData.forEach((sede) => {
+        const marker = L.marker([sede.lat, sede.lng])
+          .addTo(map)
+          .bindPopup(`
+            <div style="min-width: 200px;">
+              <h3 style="font-weight: bold; margin-bottom: 8px; color: #0fbe7c;">${sede.title}</h3>
+              <p style="margin: 4px 0; font-size: 14px;">${sede.summary}</p>
+              <button 
+                onclick="const d = document.getElementById('${sede.id}'); if(d) d.showModal();" 
+                style="margin-top: 8px; padding: 6px 12px; background: #0fbe7c; color: white; border: none; border-radius: 20px; cursor: pointer; font-size: 12px;"
+              >
+                Dettagli sede
+              </button>
+            </div>
+          `);
+        markers.push(marker);
+      });
+
+      if (markers.length > 0) {
+        const group = new L.FeatureGroup(markers);
+        map.fitBounds(group.getBounds().pad(0.1));
+      }
+    };
+
+    const initSearch = () => {
+      const searchInput = document.getElementById('search-sedi');
+      const sediCards = document.querySelectorAll('.sede-card');
+      const resultsCount = document.getElementById('results-count');
+
+      if (!searchInput || !resultsCount) return;
+
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        sediCards.forEach((card) => {
+          const title = card.getAttribute('data-sede-title') || '';
+          const city = card.getAttribute('data-sede-city') || '';
+          const province = card.getAttribute('data-sede-province') || '';
+          const address = card.getAttribute('data-sede-address') || '';
+
+          const matches =
+            !query ||
+            title.includes(query) ||
+            city.includes(query) ||
+            province.includes(query) ||
+            address.includes(query);
+
+          if (matches) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        resultsCount.textContent = visibleCount + ' sedi disponibili';
+      });
+    };
+
+    // Cargar Leaflet dinámicamente
+    function loadLeaflet() {
+      return new Promise((resolve, reject) => {
+        if (window.L) {
+          resolve(window.L);
+          return;
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js';
+        script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+        script.crossOrigin = 'anonymous';
+        script.onload = () => {
+          if (window.L) {
+            resolve(window.L);
+          } else {
+            reject(new Error('Leaflet no se cargó correctamente'));
+          }
+        };
+        script.onerror = () => reject(new Error('Error al cargar Leaflet'));
+        document.head.appendChild(script);
+      });
+    }
+
+    function initAll() {
+      initSediModals();
+      initSearch();
+      
+      // Cargar Leaflet y luego inicializar el mapa
+      loadLeaflet()
+        .then(() => {
+          // Pequeño delay para asegurar que todo esté listo
+          setTimeout(() => {
+            initMap();
+          }, 100);
+        })
+        .catch((error) => {
+          console.error('Error cargando Leaflet:', error);
+          const mapElement = document.getElementById('map');
+          if (mapElement) {
+            mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;"><p>Errore nel caricamento della mappa. Ricarica la pagina.</p></div>';
+          }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAll);
+    } else {
+      initAll();
     }
   </script>
 </PageLayout>

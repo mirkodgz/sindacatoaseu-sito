@@ -1,0 +1,264 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Iscriviti — SINDACATO ASEU',
+  description:
+    'Iscriviti al SINDACATO ASEU per ricevere assistenza sindacale, legale e previdenziale. Delega con trattenua, quota annuale e servizi riservati agli iscritti.',
+  keywords:
+    'iscrizione sindacato, iscriviti sindacato milano, adesione sindacato ASEU, tesseramento sindacato, delega sindacale, quota sindacale',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <!-- Hero Section ******************* -->
+  <section class="relative w-full h-[50vh] md:h-[60vh] -mt-[76px] not-prose">
+    <div class="absolute inset-0">
+      <img
+        src="/contattaci-page-hero-def.webp"
+        alt="Iscriviti al SINDACATO ASEU"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    <div class="relative h-full flex items-center justify-center">
+      <div class="text-center text-white px-4 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 font-heading">Iscrizioni</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section ******************* -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Iscriverti al Sindacato ti conviene! Con noi puoi:
+        </h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <ul class="space-y-4 text-gray-700 text-lg leading-relaxed">
+          <li class="flex items-start">
+            <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
+            <span>
+              avere il <strong>totale controllo sul tuo rapporto di lavoro</strong> e sui tuoi diritti e doveri (buste
+              paga, inquadramento, straordinari ecc.);
+            </span>
+          </li>
+          <li class="flex items-start">
+            <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
+            <span>
+              ricevere sempre una mano quando hai bisogno di tutela o un chiarimento in caso di dubbi;
+            </span>
+          </li>
+          <li class="flex items-start">
+            <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
+            <span>
+              gestire le tue pratiche con Inps, Agenzia delle Entrate, Enti regionali, Comune ecc.;
+            </span>
+          </li>
+          <li class="flex items-start">
+            <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
+            <span>
+              conoscere in anteprima bonus, novità legislative, agevolazioni di cui si ha diritto;
+            </span>
+          </li>
+          <li class="flex items-start">
+            <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
+            <span>
+              godere di numerosi servizi aggiuntivi, sconti ed offerte riservate.
+            </span>
+          </li>
+        </ul>
+
+        <div class="mt-8 text-center">
+          <a
+            href={getPermalink('/servizi')}
+            class="text-[#0fbe7c] font-semibold hover:underline text-lg"
+          >
+            Clicca qui per scoprire l'elenco completo dei servizi riservati agli iscritti →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section ******************* -->
+  <section class="bg-[#fbfbfb] py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Iscrizione al sindacato</h2>
+        <p class="text-lg text-gray-600">
+          Puoi iscriverti direttamente online scegliendo una delle due modalità
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+        <!-- Card: Delega con trattenua -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+            <Icon name="tabler:file-text" class="w-24 h-24 text-white opacity-80" />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Delega con trattenua</h3>
+            <p class="text-gray-700 text-base leading-relaxed mb-6">
+              Clicca qui per scaricare la delega sindacale. Compila il modulo, autentica la firma e invia la delega
+              compilata.
+            </p>
+            <button
+              id="download-btn"
+              type="button"
+              class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#0fbe7c] text-white font-semibold rounded-full hover:bg-[#0ca868] transition"
+            >
+              <Icon name="tabler:download" class="w-5 h-5 mr-2" />
+              Scarica la Delega
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section ******************* -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center">
+        <p class="text-gray-600 mb-4">
+          Hai domande? Contattaci per maggiori informazioni
+        </p>
+        <a
+          href={getPermalink('/contatti')}
+          class="inline-flex items-center justify-center px-6 py-3 border-2 border-[#0fbe7c] text-[#0fbe7c] font-semibold rounded-full hover:bg-[#0fbe7c] hover:text-white transition"
+        >
+          Contattaci
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<!-- Google reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LdcByIsAAAAAI43182fElwC26T8H5mTe47ALrjP"></script>
+
+<script is:inline>
+  // Protección con Google reCAPTCHA v3
+  (function() {
+    const RECAPTCHA_SITE_KEY = '6LdcByIsAAAAAI43182fElwC26T8H5mTe47ALrjP';
+    const downloadBtn = document.getElementById('download-btn');
+    const fileUrl = '/delega%20ASEU%20MILANO.docx';
+    const fileName = 'delega-aseu-milano.docx';
+    
+    if (!downloadBtn) return;
+
+    // Variables de protección adicional
+    let pageInteractionTime = 0;
+    let interactionCount = 0;
+    const pageLoadTime = Date.now();
+    const minTimeOnPage = 1000; // Mínimo 1 segundo en la página
+
+    // Detectar interacciones humanas (protección adicional)
+    const detectHumanInteraction = () => {
+      interactionCount++;
+      pageInteractionTime = Date.now() - pageLoadTime;
+    };
+
+    document.addEventListener('mousemove', detectHumanInteraction, { once: false, passive: true });
+    document.addEventListener('click', detectHumanInteraction, { once: false, passive: true });
+    document.addEventListener('scroll', detectHumanInteraction, { once: false, passive: true });
+
+    // Función para descargar el archivo
+    const downloadFile = () => {
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Rate limiting con localStorage
+      const downloadKey = 'aseu_download_timestamp';
+      const lastDownload = localStorage.getItem(downloadKey);
+      const now = Date.now();
+      
+      if (lastDownload) {
+        const timeSinceLastDownload = now - parseInt(lastDownload);
+        if (timeSinceLastDownload < 10000) {
+          alert('Attendi qualche secondo prima di scaricare di nuovo.');
+          return;
+        }
+      }
+      
+      localStorage.setItem(downloadKey, now.toString());
+    };
+
+    // Función para verificar con reCAPTCHA y descargar
+    const verifyAndDownload = async (e) => {
+      e.preventDefault();
+      
+      // Verificación básica de tiempo en página
+      const timeOnPage = Date.now() - pageLoadTime;
+      if (timeOnPage < minTimeOnPage) {
+        alert('Per favore, attendi un momento prima di scaricare il file.');
+        return;
+      }
+
+      // Verificar si reCAPTCHA está cargado
+      if (typeof window.grecaptcha === 'undefined' || !window.grecaptcha.ready) {
+        console.error('reCAPTCHA non caricato');
+        alert('Errore di sicurezza. Ricarica la pagina e riprova.');
+        return;
+      }
+
+      try {
+        // Ejecutar reCAPTCHA v3
+        const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { 
+          action: 'download_delega' 
+        });
+        
+        if (!token) {
+          alert('Verifica di sicurezza fallita. Riprova.');
+          return;
+        }
+
+        // Verificar token con Google (opcional - requiere backend)
+        // Por ahora, si obtenemos un token válido, permitimos la descarga
+        // En producción, deberías verificar el token en el servidor con la Secret Key
+        
+        // Verificación básica del token
+        if (token && token.length > 20) {
+          downloadFile();
+        } else {
+          alert('Token di verifica non valido. Riprova.');
+        }
+        
+      } catch (error) {
+        console.error('Errore con reCAPTCHA:', error);
+        alert('Errore durante la verifica. Riprova tra qualche secondo.');
+      }
+    };
+
+    // Inicializar reCAPTCHA cuando esté listo
+    if (typeof window.grecaptcha !== 'undefined') {
+      window.grecaptcha.ready(() => {
+        console.log('reCAPTCHA v3 inizializzato correttamente');
+        downloadBtn.addEventListener('click', verifyAndDownload);
+      });
+    } else {
+      // Fallback si reCAPTCHA no carga
+      console.warn('reCAPTCHA non disponibile, usando protezione base');
+      downloadBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const timeOnPage = Date.now() - pageLoadTime;
+        if (timeOnPage >= minTimeOnPage && interactionCount >= 1) {
+          downloadFile();
+        } else {
+          alert('Per favore, interagisci con la pagina prima di scaricare.');
+        }
+      });
+    }
+  })();
+</script>

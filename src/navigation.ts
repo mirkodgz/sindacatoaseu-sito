@@ -9,6 +9,9 @@ export const headerData = {
     {
       text: 'SEDI',
       href: getPermalink('/sedi'),
+      links: [
+        { text: 'DOVE SIAMO', href: getPermalink('/dove-siamo') },
+      ],
     },
     {
       text: 'CHI SIAMO',
@@ -84,12 +87,12 @@ export const headerData = {
       href: getPermalink('/blog'),
     },
     {
-      text: 'DOVE SIAMO',
-      href: getPermalink('/dove-siamo'),
-    },
-    {
       text: 'CONTATTI',
       href: getPermalink('/contatti'),
+    },
+    {
+      text: 'ISCRIVITI',
+      href: getPermalink('/iscriviti'),
     },
   ],
   actions: [],
@@ -117,6 +120,6 @@ export const footerData = {
   ],
   socialLinks: [],
   footNote: `
-    Associazione Sindacale Europea Universale Via Mario Pieri,2 Milano (MI) 20127 – Tel. 02.2592773 – cell.: 349.6250509 – e-mail: info@sindacatoaseu.it
+    Associazione Sindacale Europea Universale - ASEU, Via Mario Pieri, 2 - 20127 Milano (MI) -  Tel. 02.2592773 – cell.: 349.6250509 – e-mail: info@sindacatoaseu.it
   `,
 };
