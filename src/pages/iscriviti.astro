@@ -106,15 +106,14 @@ const metadata = {
           <div class="p-8">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Delega con trattenua</h3>
             <p class="text-gray-700 text-base leading-relaxed mb-6">
-              Clicca qui per scaricare la delega sindacale. Compila il modulo, autentica la firma e invia la delega
-              compilata.
+              Clicca qui per visualizzare la delega sindacale. Potrai leggerla con calma e, se interessato, scaricarla direttamente dal PDF.
             </p>
             <button
               id="download-btn"
               type="button"
               class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#0fbe7c] text-white font-semibold rounded-full hover:bg-[#0ca868] transition"
             >
-              <Icon name="tabler:download" class="w-5 h-5 mr-2" />
+              <Icon name="tabler:file-text" class="w-5 h-5 mr-2" />
               Scarica la Delega
             </button>
           </div>
@@ -149,8 +148,7 @@ const metadata = {
   (function() {
     const RECAPTCHA_SITE_KEY = '6LdcByIsAAAAAI43182fElwC26T8H5mTe47ALrjP';
     const downloadBtn = document.getElementById('download-btn');
-    const fileUrl = '/delega%20ASEU%20MILANO.docx';
-    const fileName = 'delega-aseu-milano.docx';
+    const fileUrl = 'https://res.cloudinary.com/ape1minuto/image/upload/v1765142739/wkn9pj80ai5yzj3zukyi.pdf';
     
     if (!downloadBtn) return;
 
@@ -170,15 +168,8 @@ const metadata = {
     document.addEventListener('click', detectHumanInteraction, { once: false, passive: true });
     document.addEventListener('scroll', detectHumanInteraction, { once: false, passive: true });
 
-    // Función para descargar el archivo
-    const downloadFile = () => {
-      const link = document.createElement('a');
-      link.href = fileUrl;
-      link.download = fileName;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
+    // Función para abrir el PDF en una nueva pestaña
+    const openPDF = () => {
       // Rate limiting con localStorage
       const downloadKey = 'aseu_download_timestamp';
       const lastDownload = localStorage.getItem(downloadKey);
@@ -186,23 +177,25 @@ const metadata = {
       
       if (lastDownload) {
         const timeSinceLastDownload = now - parseInt(lastDownload);
-        if (timeSinceLastDownload < 10000) {
-          alert('Attendi qualche secondo prima di scaricare di nuovo.');
-          return;
+        if (timeSinceLastDownload < 5000) {
+          // Solo mostrar alerta si intenta abrir muy rápido, pero permitir abrir
+          console.log('Apertura rapida rilevata');
         }
       }
       
+      // Abrir el PDF en una nueva pestaña para que el usuario lo vea
+      window.open(fileUrl, '_blank', 'noopener,noreferrer');
       localStorage.setItem(downloadKey, now.toString());
     };
 
-    // Función para verificar con reCAPTCHA y descargar
-    const verifyAndDownload = async (e) => {
+    // Función para verificar con reCAPTCHA y abrir el PDF
+    const verifyAndOpen = async (e) => {
       e.preventDefault();
       
       // Verificación básica de tiempo en página
       const timeOnPage = Date.now() - pageLoadTime;
       if (timeOnPage < minTimeOnPage) {
-        alert('Per favore, attendi un momento prima di scaricare il file.');
+        alert('Per favore, attendi un momento prima di aprire il file.');
         return;
       }
 
@@ -216,7 +209,7 @@ const metadata = {
       try {
         // Ejecutar reCAPTCHA v3
         const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { 
-          action: 'download_delega' 
+          action: 'open_delega' 
         });
         
         if (!token) {
@@ -225,12 +218,12 @@ const metadata = {
         }
 
         // Verificar token con Google (opcional - requiere backend)
-        // Por ahora, si obtenemos un token válido, permitimos la descarga
+        // Por ahora, si obtenemos un token válido, permitimos abrir el PDF
         // En producción, deberías verificar el token en el servidor con la Secret Key
         
         // Verificación básica del token
         if (token && token.length > 20) {
-          downloadFile();
+          openPDF();
         } else {
           alert('Token di verifica non valido. Riprova.');
         }
@@ -245,7 +238,7 @@ const metadata = {
     if (typeof window.grecaptcha !== 'undefined') {
       window.grecaptcha.ready(() => {
         console.log('reCAPTCHA v3 inizializzato correttamente');
-        downloadBtn.addEventListener('click', verifyAndDownload);
+        downloadBtn.addEventListener('click', verifyAndOpen);
       });
     } else {
       // Fallback si reCAPTCHA no carga
@@ -254,9 +247,9 @@ const metadata = {
         e.preventDefault();
         const timeOnPage = Date.now() - pageLoadTime;
         if (timeOnPage >= minTimeOnPage && interactionCount >= 1) {
-          downloadFile();
+          openPDF();
         } else {
-          alert('Per favore, interagisci con la pagina prima di scaricare.');
+          alert('Per favore, interagisci con la pagina prima di aprire il file.');
         }
       });
     }
