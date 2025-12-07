@@ -66,7 +66,9 @@ const sedeNazionale = {
               {
                 sedeNazionale.ref && (
                   <p>
-                    <span class="font-semibold text-gray-900">Referenti:</span> {sedeNazionale.ref}
+                    <span class="font-semibold text-gray-900">
+                      {sedeNazionale.ref.includes(' e ') || sedeNazionale.ref.includes(' – ') || sedeNazionale.ref.includes(' - ') || sedeNazionale.ref.includes(' & ') ? 'Referenti:' : 'Referente:'}
+                    </span> {sedeNazionale.ref}
                   </p>
                 )
               }

@@ -271,7 +271,9 @@ const sedi = [
           <div class="mt-6 space-y-4 text-gray-700 text-base">
             {sede.ref && (
               <p>
-                <span class="font-semibold text-gray-900">Referenti:</span> {sede.ref}
+                <span class="font-semibold text-gray-900">
+                  {sede.ref.includes(' e ') || sede.ref.includes(' – ') || sede.ref.includes(' - ') || sede.ref.includes(' & ') ? 'Referenti:' : 'Referente:'}
+                </span> {sede.ref}
               </p>
             )}
             {sede.phoneDisplay && (
