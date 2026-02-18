@@ -45,41 +45,30 @@ const metadata = {
           <li class="flex items-start">
             <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
             <span>
-              avere il <strong>totale controllo sul tuo rapporto di lavoro</strong> e sui tuoi diritti e doveri (buste
-              paga, inquadramento, straordinari ecc.);
+              avere il <strong>totale controllo sul tuo rapporto di lavoro</strong> e sui tuoi diritti e doveri (buste paga,
+              inquadramento, straordinari ecc.);
             </span>
           </li>
           <li class="flex items-start">
             <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
-            <span>
-              ricevere sempre una mano quando hai bisogno di tutela o un chiarimento in caso di dubbi;
-            </span>
+            <span> ricevere sempre una mano quando hai bisogno di tutela o un chiarimento in caso di dubbi; </span>
           </li>
           <li class="flex items-start">
             <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
-            <span>
-              gestire le tue pratiche con Inps, Agenzia delle Entrate, Enti regionali, Comune ecc.;
-            </span>
+            <span> gestire le tue pratiche con Inps, Agenzia delle Entrate, Enti regionali, Comune ecc.; </span>
           </li>
           <li class="flex items-start">
             <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
-            <span>
-              conoscere in anteprima bonus, novità legislative, agevolazioni di cui si ha diritto;
-            </span>
+            <span> conoscere in anteprima bonus, novità legislative, agevolazioni di cui si ha diritto; </span>
           </li>
           <li class="flex items-start">
             <Icon name="tabler:check" class="w-6 h-6 text-[#0fbe7c] mr-3 mt-1 flex-shrink-0" />
-            <span>
-              godere di numerosi servizi aggiuntivi, sconti ed offerte riservate.
-            </span>
+            <span> godere di numerosi servizi aggiuntivi, sconti ed offerte riservate. </span>
           </li>
         </ul>
 
         <div class="mt-8 text-center">
-          <a
-            href={getPermalink('/servizi')}
-            class="text-[#0fbe7c] font-semibold hover:underline text-lg"
-          >
+          <a href={getPermalink('/servizi')} class="text-[#0fbe7c] font-semibold hover:underline text-lg">
             Clicca qui per scoprire l'elenco completo dei servizi riservati agli iscritti →
           </a>
         </div>
@@ -92,21 +81,22 @@ const metadata = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Iscrizione al sindacato</h2>
-        <p class="text-lg text-gray-600">
-          Puoi iscriverti direttamente online scegliendo una delle due modalità
-        </p>
+        <p class="text-lg text-gray-600">Puoi iscriverti direttamente online scegliendo una delle due modalità</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
         <!-- Card: Delega con trattenua -->
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all">
+        <div
+          class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all"
+        >
           <div class="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
             <Icon name="tabler:file-text" class="w-24 h-24 text-white opacity-80" />
           </div>
           <div class="p-8">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Delega con trattenua</h3>
             <p class="text-gray-700 text-base leading-relaxed mb-6">
-              Clicca qui per visualizzare la delega sindacale. Potrai leggerla con calma e, se interessato, scaricarla direttamente dal PDF.
+              Clicca qui per visualizzare la delega sindacale. Potrai leggerla con calma e, se interessato, scaricarla
+              direttamente dal PDF.
             </p>
             <button
               id="download-btn"
@@ -126,9 +116,7 @@ const metadata = {
   <section class="bg-white py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center">
-        <p class="text-gray-600 mb-4">
-          Hai domande? Contattaci per maggiori informazioni
-        </p>
+        <p class="text-gray-600 mb-4">Hai domande? Contattaci per maggiori informazioni</p>
         <a
           href={getPermalink('/contatti')}
           class="inline-flex items-center justify-center px-6 py-3 border-2 border-[#0fbe7c] text-[#0fbe7c] font-semibold rounded-full hover:bg-[#0fbe7c] hover:text-white transition"
@@ -145,15 +133,14 @@ const metadata = {
 
 <script is:inline>
   // Protección con Google reCAPTCHA v3
-  (function() {
+  (function () {
     const RECAPTCHA_SITE_KEY = '6LdcByIsAAAAAI43182fElwC26T8H5mTe47ALrjP';
     const downloadBtn = document.getElementById('download-btn');
     const fileUrl = 'https://res.cloudinary.com/ape1minuto/image/upload/v1765142739/wkn9pj80ai5yzj3zukyi.pdf';
-    
+
     if (!downloadBtn) return;
 
     // Variables de protección adicional
-    let pageInteractionTime = 0;
     let interactionCount = 0;
     const pageLoadTime = Date.now();
     const minTimeOnPage = 1000; // Mínimo 1 segundo en la página
@@ -161,7 +148,6 @@ const metadata = {
     // Detectar interacciones humanas (protección adicional)
     const detectHumanInteraction = () => {
       interactionCount++;
-      pageInteractionTime = Date.now() - pageLoadTime;
     };
 
     document.addEventListener('mousemove', detectHumanInteraction, { once: false, passive: true });
@@ -174,7 +160,7 @@ const metadata = {
       const downloadKey = 'aseu_download_timestamp';
       const lastDownload = localStorage.getItem(downloadKey);
       const now = Date.now();
-      
+
       if (lastDownload) {
         const timeSinceLastDownload = now - parseInt(lastDownload);
         if (timeSinceLastDownload < 5000) {
@@ -182,7 +168,7 @@ const metadata = {
           console.log('Apertura rapida rilevata');
         }
       }
-      
+
       // Abrir el PDF en una nueva pestaña para que el usuario lo vea
       window.open(fileUrl, '_blank', 'noopener,noreferrer');
       localStorage.setItem(downloadKey, now.toString());
@@ -191,7 +177,7 @@ const metadata = {
     // Función para verificar con reCAPTCHA y abrir el PDF
     const verifyAndOpen = async (e) => {
       e.preventDefault();
-      
+
       // Verificación básica de tiempo en página
       const timeOnPage = Date.now() - pageLoadTime;
       if (timeOnPage < minTimeOnPage) {
@@ -208,10 +194,10 @@ const metadata = {
 
       try {
         // Ejecutar reCAPTCHA v3
-        const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { 
-          action: 'open_delega' 
+        const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+          action: 'open_delega',
         });
-        
+
         if (!token) {
           alert('Verifica di sicurezza fallita. Riprova.');
           return;
@@ -220,14 +206,13 @@ const metadata = {
         // Verificar token con Google (opcional - requiere backend)
         // Por ahora, si obtenemos un token válido, permitimos abrir el PDF
         // En producción, deberías verificar el token en el servidor con la Secret Key
-        
+
         // Verificación básica del token
         if (token && token.length > 20) {
           openPDF();
         } else {
           alert('Token di verifica non valido. Riprova.');
         }
-        
       } catch (error) {
         console.error('Errore con reCAPTCHA:', error);
         alert('Errore durante la verifica. Riprova tra qualche secondo.');
