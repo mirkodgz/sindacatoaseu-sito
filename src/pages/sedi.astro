@@ -30,15 +30,15 @@ const sedi = [
     title: 'Segreteria Provinciale di Milano',
     zone: 'Segreteria Provinciale di Milano',
     ref: 'Luciano Ammendola',
-    phoneDisplay: '02.9528731',
-    phoneLink: '029528731',
+    phoneDisplay: '02 26305622',
+    phoneLink: '0226305622',
     email: 'mcl.martesana@gmail.com',
     address: "Via Bergamo, 4, Cassina de' Pecchi (MI) - 20060 Italia",
     summary: "Via Bergamo, 4 — Cassina de' Pecchi (MI)",
     mapsUrl: 'https://maps.app.goo.gl/gEJ91SMrBftH4vXM8',
     icon: '📍',
-    lat: 45.5200,
-    lng: 9.3600,
+    lat: 45.52,
+    lng: 9.36,
     city: "Cassina de' Pecchi",
     province: 'MI',
   },
@@ -71,8 +71,8 @@ const sedi = [
     summary: 'Via Carmelita de Ponti, 22 — Cinisello Balsamo (MI)',
     mapsUrl: 'https://www.google.com/maps?q=Via+Carmelita+de+Ponti,+22,+20092+Cinisello+Balsamo+(MI),+Italia',
     icon: '📍',
-    lat: 45.5500,
-    lng: 9.2200,
+    lat: 45.55,
+    lng: 9.22,
     city: 'Cinisello Balsamo',
     province: 'MI',
   },
@@ -122,8 +122,8 @@ const sedi = [
     summary: 'Corso XXV Aprile, 74/F — Erba (CO)',
     mapsUrl: 'https://www.google.com/maps?q=Corso+XXV+Aprile,+74/F,+22036+Erba+(CO),+Italia',
     icon: '📍',
-    lat: 45.7900,
-    lng: 9.2300,
+    lat: 45.79,
+    lng: 9.23,
     city: 'Erba',
     province: 'CO',
   },
@@ -139,8 +139,8 @@ const sedi = [
     summary: 'Via Nazionale Olivarella, 31/32 — San Filippo del Mela (ME)',
     mapsUrl: 'https://maps.app.goo.gl/Gr73bJPFgGhgzETJ9',
     icon: '📍',
-    lat: 38.1700,
-    lng: 15.2700,
+    lat: 38.17,
+    lng: 15.27,
     city: 'San Filippo del Mela',
     province: 'ME',
   },
@@ -156,8 +156,8 @@ const sedi = [
     summary: 'Via Binda, 33 — Milano (MI)',
     mapsUrl: 'https://maps.app.goo.gl/Gr73bJPFgGhgzETJ9',
     icon: '📍',
-    lat: 45.4500,
-    lng: 9.2000,
+    lat: 45.45,
+    lng: 9.2,
     city: 'Milano',
     province: 'MI',
   },
@@ -225,28 +225,37 @@ const sedi = [
 
         <!-- Sedi Cards List (Right on desktop, Bottom on mobile) -->
         <div class="order-2 lg:order-2">
-          <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-lg h-full lg:overflow-y-auto lg:max-h-[600px]">
+          <div
+            class="bg-white rounded-2xl border border-gray-200 p-4 shadow-lg h-full lg:overflow-y-auto lg:max-h-[600px]"
+          >
             <div class="space-y-4" id="sedi-grid">
-        {
-          sedi.map((sede) => (
-              <article class="sede-card border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md hover:border-[#0fbe7c] transition flex flex-col gap-3 bg-white cursor-pointer" data-sede-title={sede.title.toLowerCase()} data-sede-city={sede.city?.toLowerCase() || ''} data-sede-province={sede.province?.toLowerCase() || ''} data-sede-address={sede.address.toLowerCase()} data-modal-target={sede.id}>
-                <div class="flex items-start gap-3">
-                  <div class="text-2xl flex-shrink-0">{sede.icon}</div>
-                  <div class="flex-grow min-w-0">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-1">{sede.title}</h3>
-                    <p class="text-sm text-gray-500">{sede.summary}</p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  data-modal-target={sede.id}
-                  class="mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full border border-[#0fbe7c] text-[#0fbe7c] font-semibold hover:bg-[#0fbe7c] hover:text-white transition text-sm"
-                >
-                  Dettagli sede
-                </button>
-              </article>
-          ))
-        }
+              {
+                sedi.map((sede) => (
+                  <article
+                    class="sede-card border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md hover:border-[#0fbe7c] transition flex flex-col gap-3 bg-white cursor-pointer"
+                    data-sede-title={sede.title.toLowerCase()}
+                    data-sede-city={sede.city?.toLowerCase() || ''}
+                    data-sede-province={sede.province?.toLowerCase() || ''}
+                    data-sede-address={sede.address.toLowerCase()}
+                    data-modal-target={sede.id}
+                  >
+                    <div class="flex items-start gap-3">
+                      <div class="text-2xl flex-shrink-0">{sede.icon}</div>
+                      <div class="flex-grow min-w-0">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">{sede.title}</h3>
+                        <p class="text-sm text-gray-500">{sede.summary}</p>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      data-modal-target={sede.id}
+                      class="mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full border border-[#0fbe7c] text-[#0fbe7c] font-semibold hover:bg-[#0fbe7c] hover:text-white transition text-sm"
+                    >
+                      Dettagli sede
+                    </button>
+                  </article>
+                ))
+              }
             </div>
           </div>
         </div>
@@ -272,8 +281,14 @@ const sedi = [
             {sede.ref && (
               <p>
                 <span class="font-semibold text-gray-900">
-                  {sede.ref.includes(' e ') || sede.ref.includes(' – ') || sede.ref.includes(' - ') || sede.ref.includes(' & ') ? 'Referenti:' : 'Referente:'}
-                </span> {sede.ref}
+                  {sede.ref.includes(' e ') ||
+                  sede.ref.includes(' – ') ||
+                  sede.ref.includes(' - ') ||
+                  sede.ref.includes(' & ')
+                    ? 'Referenti:'
+                    : 'Referente:'}
+                </span>{' '}
+                {sede.ref}
               </p>
             )}
             {sede.phoneDisplay && (
@@ -324,12 +339,7 @@ const sedi = [
             </div>
             <p class="text-xs text-gray-500 mt-2 text-center">
               Se la mappa non si carica,{' '}
-              <a
-                href={sede.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-[#0fbe7c] hover:underline"
-              >
+              <a href={sede.mapsUrl} target="_blank" rel="noopener noreferrer" class="text-[#0fbe7c] hover:underline">
                 clicca qui per aprire Google Maps
               </a>
             </p>
@@ -364,19 +374,87 @@ const sedi = [
   </style>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
   <script is:inline>
     const sediData = [
-      { id: 'modal-sede-nazionale', title: 'Sede Nazionale', lat: 45.5019, lng: 9.2314, address: 'Via Mario Pieri, 2, 20127 Milano (MI) - Italia', summary: 'Via Mario Pieri, 2 — Milano (MI)' },
-      { id: 'modal-segreteria-provinciale', title: 'Segreteria Provinciale di Milano', lat: 45.5200, lng: 9.3600, address: "Via Bergamo, 4, Cassina de' Pecchi (MI) - 20060 Italia", summary: "Via Bergamo, 4 — Cassina de' Pecchi (MI)" },
-      { id: 'modal-segreteria-piemonte', title: 'Segreteria Regionale Piemonte', lat: 45.4469, lng: 8.6222, address: 'Via Monte Grappa, 8/D, Novara (NO) - 28100 Italia', summary: 'Via Monte Grappa, 8/D — Novara (NO)' },
-      { id: 'modal-sede-cinisello', title: 'Sede', lat: 45.5500, lng: 9.2200, address: 'Via Carmelita de Ponti, 22, Cinisello Balsamo (MI) - 20092 Italia', summary: 'Via Carmelita de Ponti, 22 — Cinisello Balsamo (MI)' },
-      { id: 'modal-sede-monza-1', title: 'Sede', lat: 45.5845, lng: 9.2744, address: 'Via San Rocco, 28, Monza (MB) - 20900 Italia', summary: 'Via San Rocco, 28 — Monza (MB)' },
-      { id: 'modal-sede-monza-2', title: 'Sede', lat: 45.5845, lng: 9.2744, address: 'Via Quarnaro, 1, Monza (MB) - 20900 Italia', summary: 'Via Quarnaro, 1 — Monza (MB)' },
-      { id: 'modal-sede-erba', title: 'Sede', lat: 45.7900, lng: 9.2300, address: 'Corso XXV Aprile, 74/F, Erba (CO) - 22036 Italia', summary: 'Corso XXV Aprile, 74/F — Erba (CO)' },
-      { id: 'modal-sede-messina', title: 'Sede', lat: 38.1700, lng: 15.2700, address: 'Via Nazionale Olivarella, 31/32, San Filippo del Mela (ME) - 98044 Italia', summary: 'Via Nazionale Olivarella, 31/32 — San Filippo del Mela (ME)' },
-      { id: 'modal-sede-milano-binda', title: 'Sede', lat: 45.4500, lng: 9.2000, address: 'Via Binda, 33, Milano (MI) - 20143 Italia', summary: 'Via Binda, 33 — Milano (MI)' },
+      {
+        id: 'modal-sede-nazionale',
+        title: 'Sede Nazionale',
+        lat: 45.5019,
+        lng: 9.2314,
+        address: 'Via Mario Pieri, 2, 20127 Milano (MI) - Italia',
+        summary: 'Via Mario Pieri, 2 — Milano (MI)',
+      },
+      {
+        id: 'modal-segreteria-provinciale',
+        title: 'Segreteria Provinciale di Milano',
+        lat: 45.52,
+        lng: 9.36,
+        address: "Via Bergamo, 4, Cassina de' Pecchi (MI) - 20060 Italia",
+        summary: "Via Bergamo, 4 — Cassina de' Pecchi (MI)",
+      },
+      {
+        id: 'modal-segreteria-piemonte',
+        title: 'Segreteria Regionale Piemonte',
+        lat: 45.4469,
+        lng: 8.6222,
+        address: 'Via Monte Grappa, 8/D, Novara (NO) - 28100 Italia',
+        summary: 'Via Monte Grappa, 8/D — Novara (NO)',
+      },
+      {
+        id: 'modal-sede-cinisello',
+        title: 'Sede',
+        lat: 45.55,
+        lng: 9.22,
+        address: 'Via Carmelita de Ponti, 22, Cinisello Balsamo (MI) - 20092 Italia',
+        summary: 'Via Carmelita de Ponti, 22 — Cinisello Balsamo (MI)',
+      },
+      {
+        id: 'modal-sede-monza-1',
+        title: 'Sede',
+        lat: 45.5845,
+        lng: 9.2744,
+        address: 'Via San Rocco, 28, Monza (MB) - 20900 Italia',
+        summary: 'Via San Rocco, 28 — Monza (MB)',
+      },
+      {
+        id: 'modal-sede-monza-2',
+        title: 'Sede',
+        lat: 45.5845,
+        lng: 9.2744,
+        address: 'Via Quarnaro, 1, Monza (MB) - 20900 Italia',
+        summary: 'Via Quarnaro, 1 — Monza (MB)',
+      },
+      {
+        id: 'modal-sede-erba',
+        title: 'Sede',
+        lat: 45.79,
+        lng: 9.23,
+        address: 'Corso XXV Aprile, 74/F, Erba (CO) - 22036 Italia',
+        summary: 'Corso XXV Aprile, 74/F — Erba (CO)',
+      },
+      {
+        id: 'modal-sede-messina',
+        title: 'Sede',
+        lat: 38.17,
+        lng: 15.27,
+        address: 'Via Nazionale Olivarella, 31/32, San Filippo del Mela (ME) - 98044 Italia',
+        summary: 'Via Nazionale Olivarella, 31/32 — San Filippo del Mela (ME)',
+      },
+      {
+        id: 'modal-sede-milano-binda',
+        title: 'Sede',
+        lat: 45.45,
+        lng: 9.2,
+        address: 'Via Binda, 33, Milano (MI) - 20143 Italia',
+        summary: 'Via Binda, 33 — Milano (MI)',
+      },
     ];
 
     const initSediModals = () => {
@@ -421,7 +499,7 @@ const sedi = [
       // Limpiar el contenido de carga
       mapElement.innerHTML = '';
 
-      const map = L.map('map').setView([45.4642, 9.1900], 6);
+      const map = L.map('map').setView([45.4642, 9.19], 6);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
@@ -431,9 +509,7 @@ const sedi = [
       const markers = [];
 
       sediData.forEach((sede) => {
-        const marker = L.marker([sede.lat, sede.lng])
-          .addTo(map)
-          .bindPopup(`
+        const marker = L.marker([sede.lat, sede.lng]).addTo(map).bindPopup(`
             <div style="min-width: 200px;">
               <h3 style="font-weight: bold; margin-bottom: 8px; color: #0fbe7c;">${sede.title}</h3>
               <p style="margin: 4px 0; font-size: 14px;">${sede.summary}</p>
@@ -517,7 +593,7 @@ const sedi = [
     function initAll() {
       initSediModals();
       initSearch();
-      
+
       // Cargar Leaflet y luego inicializar el mapa
       loadLeaflet()
         .then(() => {
@@ -530,7 +606,8 @@ const sedi = [
           console.error('Error cargando Leaflet:', error);
           const mapElement = document.getElementById('map');
           if (mapElement) {
-            mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;"><p>Errore nel caricamento della mappa. Ricarica la pagina.</p></div>';
+            mapElement.innerHTML =
+              '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;"><p>Errore nel caricamento della mappa. Ricarica la pagina.</p></div>';
           }
         });
     }
