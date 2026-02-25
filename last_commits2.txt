@@ -1,0 +1,5 @@
+﻿4f06185 Fix lint error: remove unused variable pageInteractionTime in iscriviti.astro
+3e511cc Update phone number for Segreteria Provinciale di Milano
+58422aa Agregar nuevo logo Logo-Sindacato-ASEU-2026.png
+54a054b Actualizar logo del header a Logo-Sindacato-ASEU-2026.png
+b09ea53 Cambiar descarga a PDF Cloudinary y abrir en nueva pesta├▒a, actualizar CSP para Cloudinary, corregir label Referente/Referenti

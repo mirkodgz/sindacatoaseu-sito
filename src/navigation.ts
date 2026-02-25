@@ -9,9 +9,7 @@ export const headerData = {
     {
       text: 'SEDI',
       href: getPermalink('/sedi'),
-      links: [
-        { text: 'DOVE SIAMO', href: getPermalink('/dove-siamo') },
-      ],
+      links: [{ text: 'DOVE SIAMO', href: getPermalink('/dove-siamo') }],
     },
     {
       text: 'CHI SIAMO',
